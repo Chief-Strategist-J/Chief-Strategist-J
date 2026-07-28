@@ -8,7 +8,7 @@
 [![GitHub followers](https://img.shields.io/github/followers/Chief-Strategist-J?label=Followers&style=flat&color=6366f1)](https://github.com/Chief-Strategist-J)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/jaydeep-wagh-257652255/)
 [![Twitter](https://img.shields.io/badge/Twitter-%40ChiefErj-1DA1F2?style=flat&logo=twitter)](https://twitter.com/ChiefErj)
-[![Medium](https://img.shields.io/badge/Medium-25%20Articles-000000?style=flat&logo=medium)](https://medium.com/@scaibu)
+[![Medium](https://img.shields.io/badge/Medium-300%2B%20Articles-000000?style=flat&logo=medium)](https://medium.com/@scaibu)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live%20Site-6366f1?style=flat&logo=googlechrome)](https://chief-strategist-j.github.io)
 
 </div>
@@ -73,7 +73,7 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 
 ## ✍️ Featured Articles
 
-> I write production-depth technical articles on distributed systems, backend architecture & AI — 20+ published on Medium.
+> I write production-depth technical articles on distributed systems, backend architecture & AI — **300+ published on Medium.**
 
 | | Article | Tag | Read |
 |---|---|---|---|
@@ -86,7 +86,7 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 
 <div align="center">
 
-[![View All Articles](https://img.shields.io/badge/📚_View_All_Articles_on_Medium-20%2B_Published-000000?style=for-the-badge&logo=medium)](https://medium.com/@scaibu)
+[![View All Articles](https://img.shields.io/badge/📚_View_All_300%2B_Articles_on_Medium-000000?style=for-the-badge&logo=medium)](https://medium.com/@scaibu)
 
 </div>
 
