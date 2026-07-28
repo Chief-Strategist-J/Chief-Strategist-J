@@ -25,7 +25,7 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 > 📬 Reach me: [Portfolio](https://chief-strategist-j.github.io) • [LinkedIn](https://www.linkedin.com/in/jaydeep-wagh-257652255/) • [Twitter](https://twitter.com/ChiefErj)
 
 ---
-
+ 
 ## 🛠️ Tech Stack
 
 **Mobile & Desktop**
