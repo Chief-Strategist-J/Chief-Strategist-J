@@ -1,8 +1,7 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=260&section=header&text=Jaydeep%20Vagh&fontSize=70&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Engineer%20%E2%80%A2%20Flutter%20Architect%20%E2%80%A2%20Founder%20%40%20Scaibu&descAlignY=60&descSize=18&descColor=A5B4FC" width="100%" alt="header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=260&section=header&text=Jaydeep%20Vagh&fontSize=70&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Engineer%20%E2%80%A%20%E2%80%A2%20Founder%20%40%20Scaibu&descAlignY=60&descSize=18&descColor=A5B4FC" width="100%" alt="header"/>
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=🚀+Open+for+Full-Time+%26+Freelance+Work!;📱+Flutter+%7C+Node.js+%7C+Python+Expert;🏗️+Building+Scalable+Production+Apps;💼+Founder+%40+Scaibu+%7C+Navsari%2C+India" alt="Typing SVG" /></a>
 
 <br/>
 
@@ -18,7 +17,7 @@
 
 ## 👋 Hey, I'm Jaydeep!
 
-I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based in Navsari, India. I build production-grade **Flutter apps**, **Node.js & Python backends**, and **AI-powered software** that solves real business problems.
+I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based in Bengluru, India. I build production-grade **Node.js & Python backends**, and **AI-powered software** that solves real business problems.
 
 > 🟢 **Currently open for Full-Time roles & Freelance projects — Remote Worldwide!**
 > 
@@ -78,13 +77,12 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 
 | Project | Description | Stack |
 |---|---|---|
-| 🔒 [scaibu_mutex_lock](https://github.com/Chief-Strategist-J/scaibu_mutex_lock) | High-performance async concurrency lock for Dart/Flutter | `Dart` `Flutter` |
+
 | 📊 [llm-observability-platform](https://github.com/Chief-Strategist-J/llm-observability-platform) | LLM monitoring & observability dashboard | `Python` `TypeScript` |
-| 🤖 [flutter_ai_agent_sdk](https://github.com/Chief-Strategist-J/flutter_ai_agent_sdk) | SDK for AI agents in Flutter apps | `Dart` `Flutter` |
 | 🛒 [ProcureIQ](https://github.com/Chief-Strategist-J/ProcureIQ) | AI-powered enterprise procurement platform | `Next.js` `Python` |
 | 🔄 [kafka-messaging-pipeline](https://github.com/Chief-Strategist-J/kafka-messaging-pipeline) | High-throughput event-driven microservice pipeline | `Node.js` `Kafka` |
 | 🌐 [a2a-demo](https://github.com/Chief-Strategist-J/a2a-demo) | Google A2A Protocol demo with LangGraph & AI Agents | `Python` |
-
+| 🔒 [scaibu_mutex_lock](https://github.com/Chief-Strategist-J/scaibu_mutex_lock) | High-performance async concurrency lock for Dart/Flutter | `Dart` `Flutter` |
 ---
 
 ## 📈 Contribution Activity
@@ -100,8 +98,7 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 <div align="center">
 
 **I'm available for the following opportunities:**
-
-✅ Senior / Lead Flutter Developer &nbsp;|&nbsp; ✅ Full Stack Engineer &nbsp;|&nbsp; ✅ Freelance Projects &nbsp;|&nbsp; ✅ Remote Worldwide
+✅ Full Stack Engineer &nbsp;|&nbsp; ✅ Freelance Projects &nbsp;|&nbsp; ✅ Remote Worldwide
 
 [![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-chief--strategist--j.github.io-6366F1?style=for-the-badge)](https://chief-strategist-j.github.io)
 [![LinkedIn](https://img.shields.io/badge/💼_Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jaydeep-wagh-257652255/)
