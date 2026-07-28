@@ -1,7 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=260&section=header&text=Jaydeep%20Vagh&fontSize=70&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Engineer%20@Scaibu&descAlignY=60&descSize=18&descColor=A5B4FC" width="100%" alt="header"/>
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=260&section=header&text=Jaydeep%20Vagh&fontSize=70&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Engineer%20%40Scaibu&descAlignY=60&descSize=18&descColor=A5B4FC" width="100%" alt="header"/>
 
 <br/>
 
@@ -17,14 +16,14 @@
 
 ## 👋 Hey, I'm Jaydeep!
 
-I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based in Bengluru, India. I build production-grade **Node.js & Python backends**, and **AI-powered software** that solves real business problems.
+I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based in Bengaluru, India. I build production-grade **Node.js & Python backends**, and **AI-powered software** that solves real business problems.
 
 > 🟢 **Currently open for Full-Time roles & Freelance projects — Remote Worldwide!**
-> 
+>
 > 📬 Reach me: [Portfolio](https://chief-strategist-j.github.io) • [LinkedIn](https://www.linkedin.com/in/jaydeep-wagh-257652255/) • [Twitter](https://twitter.com/ChiefErj)
 
 ---
- 
+
 ## 🛠️ Tech Stack
 
 **Mobile & Desktop**
@@ -55,12 +54,8 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Chief-Strategist-J&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chief-Strategist-J&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" alt="langs"/>
-</div>
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=Chief-Strategist-J&theme=tokyonight&hide_border=true" height="170" alt="streak"/>
+  <img src="https://readme-stats-fork.vercel.app/api?username=Chief-Strategist-J&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="stats"/>
+  <img src="https://readme-stats-fork.vercel.app/api/top-langs/?username=Chief-Strategist-J&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" alt="langs"/>
 </div>
 
 ---
@@ -68,7 +63,7 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Chief-Strategist-J&theme=tokyonight&no-frame=true&row=1&column=7" width="100%" alt="trophy"/>
+  <img src="https://github-trophies.vercel.app/?username=Chief-Strategist-J&theme=tokyonight&no-frame=true&row=1&column=7" width="100%" alt="trophy"/>
 </div>
 
 ---
@@ -77,12 +72,12 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 
 | Project | Description | Stack |
 |---|---|---|
-
 | 📊 [llm-observability-platform](https://github.com/Chief-Strategist-J/llm-observability-platform) | LLM monitoring & observability dashboard | `Python` `TypeScript` |
 | 🛒 [ProcureIQ](https://github.com/Chief-Strategist-J/ProcureIQ) | AI-powered enterprise procurement platform | `Next.js` `Python` |
 | 🔄 [kafka-messaging-pipeline](https://github.com/Chief-Strategist-J/kafka-messaging-pipeline) | High-throughput event-driven microservice pipeline | `Node.js` `Kafka` |
 | 🌐 [a2a-demo](https://github.com/Chief-Strategist-J/a2a-demo) | Google A2A Protocol demo with LangGraph & AI Agents | `Python` |
 | 🔒 [scaibu_mutex_lock](https://github.com/Chief-Strategist-J/scaibu_mutex_lock) | High-performance async concurrency lock for Dart/Flutter | `Dart` `Flutter` |
+
 ---
 
 ## 📈 Contribution Activity
@@ -98,6 +93,7 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 <div align="center">
 
 **I'm available for the following opportunities:**
+
 ✅ Full Stack Engineer &nbsp;|&nbsp; ✅ Freelance Projects &nbsp;|&nbsp; ✅ Remote Worldwide
 
 [![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-chief--strategist--j.github.io-6366F1?style=for-the-badge)](https://chief-strategist-j.github.io)
