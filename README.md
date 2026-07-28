@@ -1,147 +1,207 @@
+<!-- Animated Header Banner -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,10,30,50&height=220&section=header&text=Jaydeep%20Vagh&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Architect%20%7C%20Flutter%20%26%20Node.js%20Expert%20%7C%20Founder%20@%20Scaibu&descAlignY=62&descScale=18" width="100%" alt="Header Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=280&section=header&text=Jaydeep%20Vagh&fontSize=72&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Engineer%20%E2%80%A2%20Flutter%20Architect%20%E2%80%A2%20Founder%20%40%20Scaibu&descAlignY=60&descSize=20&descColor=A5B4FC" width="100%" />
 </div>
 
-<p align="center">
-  <a href="mailto:jaydeepvagh@gmail.com"><img src="https://img.shields.io/badge/💼_Hire_Me-Direct_Email-0052CC?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://scaibu.co.in"><img src="https://img.shields.io/badge/🌐_Website-scaibu.co.in-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
-  <a href="https://twitter.com/ChiefErj"><img src="https://img.shields.io/badge/𝕏_Twitter-@ChiefErj-000000?style=for-the-badge&logo=x&logoColor=white" /></a>
-</p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=6366F1&center=true&vCenter=true&random=false&width=700&lines=Available+for+Full-time+Roles+%26+High-Impact+Freelance+Projects!🚀;Specializing+in+Cross-Platform+Flutter+Apps+%26+Scalable+Backends;Building+Production-Ready+Enterprise+Software;Founder+%26+Lead+Architect+at+Scaibu" alt="Typing SVG" />
-</p>
-
-<br/>
-
-<table>
-  <tr>
-    <td width="60%" valign="top">
-      <h3>👨‍💻 About Me & Value Proposition</h3>
-      <p>I am a passionate <b>Full Stack Software Architect & Entrepreneur</b> with extensive experience building production-grade mobile applications and web systems.</p>
-      <ul>
-        <li>💼 <b>Available for:</b> Senior / Lead Full-Stack & Mobile Developer roles, or Custom Freelance Contracts.</li>
-        <li>⚡ <b>Core Strengths:</b> High-performance Flutter / Dart apps, Node.js & Python APIs, PostgreSQL/MongoDB, and Dockerized Cloud Deployments.</li>
-        <li>🎯 <b>Goal:</b> Delivering sleek UI/UX paired with rock-solid, scalable architecture that converts business goals into reliable digital products.</li>
-      </ul>
-      <br/>
-      <div align="left">
-        <a href="mailto:jaydeepvagh@gmail.com">
-          <img src="https://img.shields.io/badge/⚡_Send_a_Message-Get_In_Touch-22c55e?style=for-the-badge&logo=telegram&logoColor=white" />
-        </a>
-      </div>
-    </td>
-    <td width="40%" valign="top">
-      <h3>📈 Quick Stats & Metrics</h3>
-      <ul>
-        <li>🚀 <b>Company:</b> Founder @ <a href="https://scaibu.co.in">Scaibu</a></li>
-        <li>📍 <b>Location:</b> Navsari, Gujarat, India (Open to Remote Worldwide)</li>
-        <li>📦 <b>Public Repos:</b> 35+ Projects & Packages</li>
-        <li>⚡ <b>Status:</b> 🟢 Open for Hire (Full-Time & Freelance)</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-## 🛠️ Specialized Technical Expertise
-
-<table>
-  <tr>
-    <td width="25%"><b>Mobile & Desktop</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" />
-      <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" />
-      <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" />
-      <img src="https://img.shields.io/badge/iOS-000000?style=flat-square&logo=apple&logoColor=white" />
-    </td>
-  </tr>
-  <tr>
-    <td width="25%"><b>Frontend Engineering</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-      <img src="https://img.shields.io/badge/React.js-61DAFB?style=flat-square&logo=react&logoColor=black" />
-      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
-      <img src="https://img.shields.io/badge/HTML5/CSS3-E34F26?style=flat-square&logo=html5&logoColor=white" />
-    </td>
-  </tr>
-  <tr>
-    <td width="25%"><b>Backend & Cloud</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
-      <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" />
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-      <img src="https://img.shields.io/badge/REST_API-0055DA?style=flat-square&logo=fastapi&logoColor=white" />
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-    </td>
-  </tr>
-  <tr>
-    <td width="25%"><b>Databases & Tools</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
-      <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
-      <img src="https://img.shields.io/badge/Git_&_GitHub-F05032?style=flat-square&logo=git&logoColor=white" />
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-## 💼 High-Impact Portfolio & Open Source Contributions
-
-<table width="100%">
-  <tr>
-    <th width="35%">Project / Package</th>
-    <th width="45%">Description</th>
-    <th width="20%">Tech Stack</th>
-  </tr>
-  <tr>
-    <td><b>🔒 <a href="https://github.com/Chief-Strategist-J/scaibu_mutex_lock">scaibu_mutex_lock</a></b></td>
-    <td>High-concurrency thread/async execution lock utility package published for Dart & Flutter ecosystem.</td>
-    <td><code>Dart</code> <code>Flutter</code></td>
-  </tr>
-  <tr>
-    <td><b>⚡ <a href="https://github.com/Chief-Strategist-J/magic-portfolio">magic-portfolio</a></b></td>
-    <td>Modern, high-performance portfolio template with responsive animations & crisp UX design.</td>
-    <td><code>Next.js</code> <code>TypeScript</code></td>
-  </tr>
-  <tr>
-    <td><b>🚀 <a href="https://scaibu.co.in">Scaibu Platform</a></b></td>
-    <td>Custom enterprise applications and tailored digital solution suite built for business clients.</td>
-    <td><code>Full Stack</code> <code>Cloud</code></td>
-  </tr>
-</table>
-
-<br/>
-
-## 📊 Developer Activity & GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats-git-masterrst-anuraghazra1.vercel.app/api?username=Chief-Strategist-J&show_icons=true&theme=tokyonight&hide_border=false&count_private=true&include_all_commits=true" width="49%" alt="Jaydeep's GitHub Stats" />
-  <img src="https://github-readme-stats-git-masterrst-anuraghazra1.vercel.app/api/top-langs/?username=Chief-Strategist-J&layout=compact&theme=tokyonight&hide_border=false" width="49%" alt="Top Languages" />
-</p>
-
+<!-- Animated Typing -->
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=Chief-Strategist-J&theme=tokyonight&hide_border=false" width="98%" alt="GitHub Streak" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&multiline=false&random=false&width=700&height=70&lines=%F0%9F%91%8B+Hey!+I'm+Jaydeep+—+Nice+to+meet+you!;%F0%9F%9A%80+Turning+Ideas+into+Scalable+Reality;%F0%9F%93%B1+Flutter+%7C+Node.js+%7C+Cloud+Architect;%F0%9F%92%BC+Open+for+Hire+%E2%80%94+Let's+Build+Together!" alt="Typing SVG" />
+  </a>
 </div>
 
 <br/>
 
-## 📬 Hire Me / Get In Touch
-
-Whether you have a job opportunity, a freelance project, or just want to discuss software engineering, my inbox is always open!
-
-<p align="center">
-  <a href="mailto:jaydeepvagh@gmail.com"><img src="https://img.shields.io/badge/Email-jaydeepvagh%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://scaibu.co.in"><img src="https://img.shields.io/badge/Website-Scaibu-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
-  <a href="https://twitter.com/ChiefErj"><img src="https://img.shields.io/badge/Twitter-@ChiefErj-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a>
-</p>
+<!-- Profile Views + Followers + Social Badges -->
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=Chief-Strategist-J&label=PROFILE+VIEWS&color=6366F1&style=for-the-badge" />
+  &nbsp;
+  <img src="https://img.shields.io/github/followers/Chief-Strategist-J?label=FOLLOWERS&style=for-the-badge&color=6366F1" />
+  &nbsp;
+  <a href="https://twitter.com/ChiefErj">
+    <img src="https://img.shields.io/badge/Twitter-ChiefErj-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/jaydeep-wagh-257652255/">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</div>
 
 <br/>
 
+---
+
+<!-- About Me Section with GIF -->
+<img align="right" alt="Coding GIF" width="380" src="https://user-images.githubusercontent.com/74038190/235224431-e8c8c12e-6826-47f1-89fb-2ddad83b3abf.gif" />
+
+## 🧑‍💻 About Me
+
+- 🚀 **Founder & Lead Engineer** at **[Scaibu](https://scaibu.co.in)** — building the future of software
+- 💼 **5+ years** crafting production-grade **Flutter**, **Node.js** & **Python** applications
+- 🌍 Based in **Navsari, Gujarat, India** — available **Remote Worldwide**
+- 🔭 Currently working on **AI-powered SaaS platforms & enterprise mobile apps**
+- 🌱 Deep diving into **System Design**, **Microservices**, and **LLM tooling**
+- ⚡ Published open-source **Dart/Flutter packages** used in production
+- 💬 Ask me about **Flutter architecture**, **REST APIs**, **Docker**, or **PostgreSQL**
+- 📫 Reach me at: **[scaibu.co.in](https://scaibu.co.in)** or on **[LinkedIn](https://www.linkedin.com/in/jaydeep-wagh-257652255/)**
+- 💡 Fun fact: I turn coffee ☕ into clean, scalable code
+
+<br clear="right"/>
+
+---
+
+## 🛠️ My Tech Universe
+
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,10,30,50&height=120&section=footer" width="100%" />
+
+### 📱 Mobile & Desktop
+<img src="https://skillicons.dev/icons?i=flutter,dart,androidstudio,figma&theme=dark" />
+
+### 🌐 Frontend
+<img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,html,css&theme=dark" />
+
+### ⚙️ Backend & Cloud
+<img src="https://skillicons.dev/icons?i=nodejs,python,express,fastapi,docker,linux&theme=dark" />
+
+### 🗄️ Databases & Tools
+<img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,git,github,vscode&theme=dark" />
+
+</div>
+
+---
+
+## 📊 GitHub Stats — The Numbers Don't Lie
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Chief-Strategist-J&theme=tokyonight&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" height="180" />
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chief-Strategist-J&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" height="180" />
+</div>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=Chief-Strategist-J&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" height="180" />
+</div>
+
+<br/>
+
+<!-- Contribution Snake -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="100%" />
+</div>
+
+---
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Chief-Strategist-J&theme=tokyonight&no-frame=true&no-bg=false&margin-w=4&row=1" width="100%" />
+</div>
+
+---
+
+## 🚀 Featured Projects
+
+<div align="center">
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🔒 [scaibu_mutex_lock](https://github.com/Chief-Strategist-J/scaibu_mutex_lock)
+> High-performance **async concurrency lock** library for Dart & Flutter. Used in production apps requiring safe multi-isolate execution.
+
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+</td>
+<td width="50%" valign="top">
+
+### ⚡ [flutter_ai_agent_sdk](https://github.com/Chief-Strategist-J/flutter_ai_agent_sdk)
+> A **Flutter SDK** for integrating AI agents and LLM-powered features into mobile applications.
+
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![AI](https://img.shields.io/badge/AI-Powered-8B5CF6?style=flat-square&logo=openai&logoColor=white)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📊 [llm-observability-platform](https://github.com/Chief-Strategist-J/llm-observability-platform)
+> Full-stack **LLM monitoring & observability** dashboard for production AI workloads.
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Node](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### 🛒 [ProcureIQ](https://github.com/Chief-Strategist-J/ProcureIQ)
+> Intelligent **procurement management system** with AI-driven insights, built for enterprise clients.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+
+</td>
+</tr>
+</table>
+</div>
+
+---
+
+## 💼 Hire Me
+
+<div align="center">
+
+> ### 🟢 Currently Open for Opportunities!
+> **Full-Time Roles** (Senior / Lead Developer) &nbsp;•&nbsp; **Freelance Contracts** &nbsp;•&nbsp; **Technical Consulting**
+
+| I Specialize In | You Get |
+|---|---|
+| 📱 Cross-Platform Flutter Apps (iOS + Android + Web) | Production-ready, clean architecture |
+| ⚙️ Scalable Node.js / Python Backends | REST/GraphQL APIs, Docker deployments |
+| 🗄️ Database Design & Optimization | PostgreSQL, MongoDB, Redis |
+| 🤖 AI/LLM Integration & Tooling | LangChain, agents, embeddings |
+| 🏗️ System Architecture & Tech Leadership | Microservices, CI/CD, DevOps |
+
+<br/>
+
+<a href="https://www.linkedin.com/in/jaydeep-wagh-257652255/">
+  <img src="https://img.shields.io/badge/LinkedIn-Hire%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://scaibu.co.in">
+  <img src="https://img.shields.io/badge/Website-Visit%20Scaibu-6366F1?style=for-the-badge&logo=googlechrome&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://twitter.com/ChiefErj">
+  <img src="https://img.shields.io/badge/Twitter-DM%20@ChiefErj-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+</a>
+
+</div>
+
+---
+
+## 📈 Contribution Activity
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Chief-Strategist-J&bg_color=1a1b27&color=6366F1&line=8B5CF6&point=FFFFFF&area=true&hide_border=true" width="100%" />
+</div>
+
+---
+
+<!-- Quote -->
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
+</div>
+
+<br/>
+
+<!-- Footer Wave -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,50:6366F1,100:0D1117&height=120&section=footer" width="100%" />
+</div>
+
+<div align="center">
+  <sub>⭐ If you like my work, consider giving a star to my repos! It means a lot 🙏</sub>
 </div>
