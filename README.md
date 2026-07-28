@@ -84,9 +84,9 @@
 
 <br/>
 
-<!-- Contribution Snake -->
+<!-- Contribution Graph -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Chief-Strategist-J&bg_color=0D1117&color=6366F1&line=8B5CF6&point=FFFFFF&area=true&hide_border=true&area_color=6366F120" width="100%" alt="Contribution Graph" />
 </div>
 
 ---
