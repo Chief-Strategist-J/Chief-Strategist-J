@@ -71,38 +71,24 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 
 ---
 
-## ✍️ Latest Writing on Medium
+## ✍️ Featured Articles
 
-> 📰 I write deep-dive technical articles on distributed systems, AI, backend engineering & more.
-> View all on [Medium →](https://medium.com/@scaibu)
+> I write production-depth technical articles on distributed systems, backend architecture & AI — 20+ published on Medium.
 
-| Article | Publication | Read |
-|---|---|---|
-| [Retry, Error Handling & Idempotency: The Hidden Science Behind Reliable Distributed Systems](https://medium.com/@scaibu) | DevOps.dev | 48 min |
-| [Micro Frontends](https://medium.com/@scaibu) | T3CH | 49 min |
-| [Stop Building Slow Systems: Master Advanced Queuing & Flow Control](https://medium.com/@scaibu) | Stackademic | 41 min |
-| [Stateful GitOps Rollbacks — Immutable State](https://medium.com/@scaibu) | DevOps.dev | 26 min |
-| [Why Replication Is One of the Hardest Problems in Distributed Systems](https://medium.com/@scaibu) | CodeToDeploy | 20 min |
-| [Brotli Compression Adapters for Nginx & Traefik: A Principal Engineer's Field Guide](https://medium.com/@scaibu) | OSINT Team | 23 min |
-| [FRAMING AND THE UNFINISHED SENTENCE](https://medium.com/@scaibu) | Stackademic | 18 min |
-| [Why Every Relationship Is Secretly About Someone Else](https://medium.com/@scaibu) | Medium | 31 min |
-| [Call Graph — Topological Context Assembly](https://medium.com/@scaibu) | Stackademic | 17 min |
-| [Suffix Array + Longest Common Prefix (LCP) for Code Clone Detection](https://medium.com/@scaibu) | Stackademic | 17 min |
-| [The Jenkins Complexity Ceiling: A Complete Technical Account](https://medium.com/@scaibu) | DevOps.dev | 14 min |
-| [Hierarchical Semantic Chunking](https://medium.com/@scaibu) | T3CH | 15 min |
-| [LLM Evaluation Metrics: Measuring Response Quality, Safety, Accuracy & Retrieval Performance](https://medium.com/@scaibu) | Stackademic | 56 min |
-| [The Physics of Async Systems](https://medium.com/@scaibu) | Stackademic | 35 min |
-| [From Minutes to Milliseconds: Docker Build Optimization](https://medium.com/@scaibu) | T3CH | 117 min |
-| [A Unified Streaming Architecture for Log Parsing, Embedding, and Anomaly Detection](https://medium.com/@scaibu) | Stackademic | 26 min |
-| [Architecting High-Criticality Systems: From Financial Infrastructure to LLM-Driven Intelligence](https://medium.com/@scaibu) | DevOps.dev | 112 min |
-| [Incentive Design Without Authority: Working Inside Systems You Cannot Control](https://medium.com/@scaibu) | Medium | 210 min |
-| [Event Streaming Pipeline — Complete Deep-Dive](https://medium.com/@scaibu) | Stackademic | 141 min |
-| [The Physics of Payment Systems: Why Exactly-Once Semantics Fail in Practice](https://medium.com/@scaibu) | T3CH | 15 min |
-| [Three Distributed Systems Failures from a Ride-Hailing Platform](https://medium.com/@scaibu) | Stackademic | 39 min |
-| [Deterministic Conflict Detection, Ordering, and Resolution Framework for Version Control Systems](https://medium.com/@scaibu) | DevOps.dev | 59 min |
-| [Architecture Self-Search Algorithm (ASSA): A Post-LLM Meta-Cognitive Framework for Autonomous…](https://medium.com/@scaibu) | T3CH | 104 min |
-| [The Architecture of Cognitive Collapse: Autopsy of Algorithmic Control Systems](https://medium.com/@scaibu) | Stackademic | 40 min |
-| [End-to-End Personalized Content Ranking Architecture Using Neural Relevance & Behavioral Prediction](https://medium.com/@scaibu) | DevOps.dev | 107 min |
+| | Article | Tag | Read |
+|---|---|---|---|
+| 🔥 | [Why Replication Is One of the Hardest Problems in Distributed Systems](https://medium.com/codetodeploy/why-replication-is-one-of-the-hardest-problems-in-distributed-systems-960de0117657) | `Distributed Systems` | 20 min |
+| 🔥 | [The Physics of Payment Systems: Why Exactly-Once Semantics Fail in Practice](https://medium.com/h7w/the-physics-of-payment-systems-why-exactly-once-semantics-fail-in-practice-895b5616baa0) | `Backend` | 15 min |
+| 🔥 | [From Minutes to Milliseconds: Docker Build Optimization](https://medium.com/h7w/from-minutes-to-milliseconds-docker-build-optimization-0bbc706ec692) | `DevOps` | 117 min |
+| 🔥 | [Hierarchical Semantic Chunking](https://medium.com/h7w/hierarchical-semantic-chunking-129bb46bba92) | `AI / RAG` | 15 min |
+| 📖 | [Retry, Error Handling & Idempotency: The Hidden Science Behind Reliable Distributed Systems](https://medium.com/@scaibu) | `Distributed Systems` | 48 min |
+| 📖 | [Stop Building Slow Systems: Master Advanced Queuing & Flow Control](https://medium.com/@scaibu) | `Backend` | 41 min |
+
+<div align="center">
+
+[![View All Articles](https://img.shields.io/badge/📚_View_All_Articles_on_Medium-20%2B_Published-000000?style=for-the-badge&logo=medium)](https://medium.com/@scaibu)
+
+</div>
 
 ---
 
