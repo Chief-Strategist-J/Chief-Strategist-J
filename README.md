@@ -8,6 +8,7 @@
 [![GitHub followers](https://img.shields.io/github/followers/Chief-Strategist-J?label=Followers&style=flat&color=6366f1)](https://github.com/Chief-Strategist-J)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/jaydeep-wagh-257652255/)
 [![Twitter](https://img.shields.io/badge/Twitter-%40ChiefErj-1DA1F2?style=flat&logo=twitter)](https://twitter.com/ChiefErj)
+[![Medium](https://img.shields.io/badge/Medium-25%20Articles-000000?style=flat&logo=medium)](https://medium.com/@scaibu)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live%20Site-6366f1?style=flat&logo=googlechrome)](https://chief-strategist-j.github.io)
 
 </div>
@@ -67,6 +68,41 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
   <img src="https://readme-stats-fork.vercel.app/api?username=Chief-Strategist-J&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="stats"/>
   <img src="https://readme-stats-fork.vercel.app/api/top-langs/?username=Chief-Strategist-J&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" alt="langs"/>
 </div>
+
+---
+
+## ✍️ Latest Writing on Medium
+
+> 📰 I write deep-dive technical articles on distributed systems, AI, backend engineering & more.
+> View all on [Medium →](https://medium.com/@scaibu)
+
+| Article | Publication | Read |
+|---|---|---|
+| [Retry, Error Handling & Idempotency: The Hidden Science Behind Reliable Distributed Systems](https://medium.com/@scaibu) | DevOps.dev | 48 min |
+| [Micro Frontends](https://medium.com/@scaibu) | T3CH | 49 min |
+| [Stop Building Slow Systems: Master Advanced Queuing & Flow Control](https://medium.com/@scaibu) | Stackademic | 41 min |
+| [Stateful GitOps Rollbacks — Immutable State](https://medium.com/@scaibu) | DevOps.dev | 26 min |
+| [Why Replication Is One of the Hardest Problems in Distributed Systems](https://medium.com/@scaibu) | CodeToDeploy | 20 min |
+| [Brotli Compression Adapters for Nginx & Traefik: A Principal Engineer's Field Guide](https://medium.com/@scaibu) | OSINT Team | 23 min |
+| [FRAMING AND THE UNFINISHED SENTENCE](https://medium.com/@scaibu) | Stackademic | 18 min |
+| [Why Every Relationship Is Secretly About Someone Else](https://medium.com/@scaibu) | Medium | 31 min |
+| [Call Graph — Topological Context Assembly](https://medium.com/@scaibu) | Stackademic | 17 min |
+| [Suffix Array + Longest Common Prefix (LCP) for Code Clone Detection](https://medium.com/@scaibu) | Stackademic | 17 min |
+| [The Jenkins Complexity Ceiling: A Complete Technical Account](https://medium.com/@scaibu) | DevOps.dev | 14 min |
+| [Hierarchical Semantic Chunking](https://medium.com/@scaibu) | T3CH | 15 min |
+| [LLM Evaluation Metrics: Measuring Response Quality, Safety, Accuracy & Retrieval Performance](https://medium.com/@scaibu) | Stackademic | 56 min |
+| [The Physics of Async Systems](https://medium.com/@scaibu) | Stackademic | 35 min |
+| [From Minutes to Milliseconds: Docker Build Optimization](https://medium.com/@scaibu) | T3CH | 117 min |
+| [A Unified Streaming Architecture for Log Parsing, Embedding, and Anomaly Detection](https://medium.com/@scaibu) | Stackademic | 26 min |
+| [Architecting High-Criticality Systems: From Financial Infrastructure to LLM-Driven Intelligence](https://medium.com/@scaibu) | DevOps.dev | 112 min |
+| [Incentive Design Without Authority: Working Inside Systems You Cannot Control](https://medium.com/@scaibu) | Medium | 210 min |
+| [Event Streaming Pipeline — Complete Deep-Dive](https://medium.com/@scaibu) | Stackademic | 141 min |
+| [The Physics of Payment Systems: Why Exactly-Once Semantics Fail in Practice](https://medium.com/@scaibu) | T3CH | 15 min |
+| [Three Distributed Systems Failures from a Ride-Hailing Platform](https://medium.com/@scaibu) | Stackademic | 39 min |
+| [Deterministic Conflict Detection, Ordering, and Resolution Framework for Version Control Systems](https://medium.com/@scaibu) | DevOps.dev | 59 min |
+| [Architecture Self-Search Algorithm (ASSA): A Post-LLM Meta-Cognitive Framework for Autonomous…](https://medium.com/@scaibu) | T3CH | 104 min |
+| [The Architecture of Cognitive Collapse: Autopsy of Algorithmic Control Systems](https://medium.com/@scaibu) | Stackademic | 40 min |
+| [End-to-End Personalized Content Ranking Architecture Using Neural Relevance & Behavioral Prediction](https://medium.com/@scaibu) | DevOps.dev | 107 min |
 
 ---
 
