@@ -193,7 +193,7 @@
 
 ---
 
-## 🏛️ State Machine: Canary Lifecycle & Phase Progression (ADR-0017)
+## 🏛️ Production State Machine: Canary Lifecycle & Phase Progression
 
 > *Deterministic Finite State Machine (FSM) governing progressive delivery phases, automated soak windows, Prometheus metric gates, and instant rollback paths.*
 
@@ -259,18 +259,18 @@ stateDiagram-v2
 
 ---
 
-### 📚 Architecture Decision Records (ADRs) & Engineering Specs
+### 📚 References You Might Like to Explore: Architecture & Engineering Specs
 
-| ADR ID | Domain | Architecture Decision Record | Implementation Strategy |
+| Reference | Domain / Focus | Engineering Specification & Design | Architectural Strategy |
 |---|---|---|---|
-| **ADR-0017** | Progressive Delivery | [Canary Deployment & Progressive Delivery Architecture](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0017-canary-deployment-strategy-and-progressive-delivery.md) | 4-Stage Traffic Shift (`5% → 25% → 50% → 100%`) with automated sub-5s rollback |
-| **ADR-0021** | Cloud Autoscaling | [Stateless Compute Autoscaling & Stateful Decoupling](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0021-stateless-compute-autoscaling-and-stateful-plane-decoupling.md) | Split-brain elimination with decoupled persistent data plane |
-| **ADR-0016** | Orchestration | [Kubernetes Migration & CI/CD Pipeline Architecture](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0016-kubernetes-migration-and-cicd-pipeline-architecture.md) | Container-native Kubernetes workload manifests with CSI storage binding |
-| **ADR-0014** | Ingress & Security | [Traefik Edge Proxy Gateway & Centralized Logging](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0014-traefik-edge-proxy-and-central-logging.md) | Edge TLS termination, rate-limiting, and middleware filter pipeline |
-| **ADR-0018** | Delivery Automation | [CI/CD Pipeline Architecture & Validation Tiers](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0018-continuous-integration-and-delivery-pipeline-architecture.md) | 5-Tier automated validation gates & GitOps deployment flow |
-| **ADR-0013** | Observability | [OpenTelemetry Collector & Memory Protection](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0013-otel-collector-configuration.md) | Bounded memory allocator with backpressure flow control |
-| **ADR-0010** | High Availability | [Active-Passive Zero-Downtime Failover & Fallback](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0010-dev-stable-automated-failover.md) | Automated health monitoring with active fallback triggers |
-| **ADR-0020** | Data Persistence | [Persistent Storage Lifecycle & Data Protection](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0020-persistent-storage-lifecycle-and-stateful-decoupling.md) | Immutable PVC host mounts with atomic backup pipelines |
+| **Spec-0017** | Progressive Delivery | [Canary Deployment & Progressive Delivery Architecture](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0017-canary-deployment-strategy-and-progressive-delivery.md) | 4-Stage Traffic Shift (`5% → 25% → 50% → 100%`) with automated sub-5s rollback |
+| **Spec-0021** | Cloud Autoscaling | [Stateless Compute Autoscaling & Stateful Decoupling](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0021-stateless-compute-autoscaling-and-stateful-plane-decoupling.md) | Split-brain elimination with decoupled persistent data plane |
+| **Spec-0016** | Orchestration | [Kubernetes Migration & CI/CD Pipeline Architecture](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0016-kubernetes-migration-and-cicd-pipeline-architecture.md) | Container-native Kubernetes workload manifests with CSI storage binding |
+| **Spec-0014** | Ingress & Security | [Traefik Edge Proxy Gateway & Centralized Logging](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0014-traefik-edge-proxy-and-central-logging.md) | Edge TLS termination, rate-limiting, and middleware filter pipeline |
+| **Spec-0018** | Delivery Automation | [CI/CD Pipeline Architecture & Validation Tiers](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0018-continuous-integration-and-delivery-pipeline-architecture.md) | 5-Tier automated validation gates & GitOps deployment flow |
+| **Spec-0013** | Observability | [OpenTelemetry Collector & Memory Protection](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0013-otel-collector-configuration.md) | Bounded memory allocator with backpressure flow control |
+| **Spec-0010** | High Availability | [Active-Passive Zero-Downtime Failover & Fallback](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0010-dev-stable-automated-failover.md) | Automated health monitoring with active fallback triggers |
+| **Spec-0020** | Data Persistence | [Persistent Storage Lifecycle & Data Protection](https://github.com/Scaibu/llm-obs-infra/blob/main/docs/architectureDoc/adr-0020-persistent-storage-lifecycle-and-stateful-decoupling.md) | Immutable PVC host mounts with atomic backup pipelines |
 
 ---
 
