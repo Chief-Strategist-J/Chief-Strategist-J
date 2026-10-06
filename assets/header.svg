@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="100%" height="240" fill="none">
+  <defs>
+    <linearGradient id="bg-grad-user" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10"/>
+      <stop offset="50%" stop-color="#111424"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    
+    <linearGradient id="text-grad-user" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#C7D2FE"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <linearGradient id="accent-grad-user" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <radialGradient id="glow-l-user" cx="15%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-r-user" cx="85%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .title-user {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 60px;
+      letter-spacing: 3px;
+      fill: url(#text-grad-user);
+    }
+    .subtitle-user {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 3px;
+      fill: #A5B4FC;
+      text-transform: uppercase;
+    }
+    .badge-text-user {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #C7D2FE;
+    }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="4" y="4" width="992" height="232" rx="20" fill="url(#bg-grad-user)" stroke="url(#accent-grad-user)" stroke-width="2" stroke-opacity="0.6"/>
+  
+  <!-- Glow Overlays -->
+  <rect x="4" y="4" width="992" height="232" rx="20" fill="url(#glow-l-user)"/>
+  <rect x="4" y="4" width="992" height="232" rx="20" fill="url(#glow-r-user)"/>
+
+  <!-- Circuit Accents -->
+  <g opacity="0.15" stroke="#8B5CF6" stroke-width="1">
+    <line x1="100" y1="20" x2="100" y2="220" stroke-dasharray="4 6"/>
+    <line x1="900" y1="20" x2="900" y2="220" stroke-dasharray="4 6"/>
+    <circle cx="100" cy="50" r="4" fill="#6366F1"/>
+    <circle cx="100" cy="190" r="4" fill="#38BDF8"/>
+    <circle cx="900" cy="50" r="4" fill="#8B5CF6"/>
+    <circle cx="900" cy="190" r="4" fill="#6366F1"/>
+  </g>
+
+  <!-- Header Content -->
+  <g text-anchor="middle">
+    <!-- Top Pill -->
+    <rect x="375" y="32" width="250" height="26" rx="13" fill="#6366F1" fill-opacity="0.15" stroke="#6366F1" stroke-opacity="0.4"/>
+    <text x="500" y="49" class="badge-text-user" text-anchor="middle">DISTRIBUTED &amp; AI SYSTEMS</text>
+
+    <!-- Name -->
+    <text x="500" y="125" class="title-user">JAYDEEP VAGH</text>
+
+    <!-- Title -->
+    <text x="500" y="165" class="subtitle-user">System Architect &amp; Founder @ Scaibu</text>
+
+    <!-- Accent Underline -->
+    <rect x="350" y="185" width="300" height="3" rx="1.5" fill="url(#accent-grad-user)"/>
+  </g>
+</svg>
