@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=260&section=header&text=Jaydeep%20Vagh&fontSize=70&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Engineer%20%40Scaibu&descAlignY=60&descSize=18&descColor=A5B4FC" width="100%" alt="header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=260&section=header&text=Jaydeep%20Vagh&fontSize=70&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20%26%20AI%2FML%20Systems%20Engineer%20%40Scaibu&descAlignY=60&descSize=18&descColor=A5B4FC" width="100%" alt="header"/>
 
 <br/>
 
@@ -17,70 +17,96 @@
 
 ## 👋 Hey, I'm Jaydeep!
 
-I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based in Bengaluru, India. I build production-grade **Node.js & Python backends**, and **AI-powered software** that solves real business problems.
+I'm a **Full Stack & AI/ML Systems Engineer & Founder** at [Scaibu](https://scaibu.co.in), based in Bengaluru, India. I specialize in building high-throughput **distributed backends**, **agentic AI architectures**, **RAG pipelines with Vector Databases**, and **Machine Learning infrastructure** using Google Cloud, TensorFlow, and Terraform.
 
-> 🟢 **Currently open for Full-Time roles & Freelance projects — Remote Worldwide!**
+> 🟢 **Currently open for Full-Time roles, AI/ML Consulting & Freelance projects — Remote Worldwide!**
 >
 > 📬 Reach me: [Portfolio](https://chief-strategist-j.github.io) • [LinkedIn](https://www.linkedin.com/in/jaydeep-wagh-257652255/) • [Twitter](https://twitter.com/ChiefErj)
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack & Ecosystem
 
-**Backend & Cloud**
+### 🧠 Machine Learning & Deep Learning
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Scikit--Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+### 📐 Vector Databases & Semantic Search
+![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white)
+![Milvus](https://img.shields.io/badge/Milvus-00A1EA?style=for-the-badge&logo=linuxfoundation&logoColor=white)
+![Qdrant](https://img.shields.io/badge/Qdrant-DC2626?style=for-the-badge&logo=qdrant&logoColor=white)
+![Weaviate](https://img.shields.io/badge/Weaviate-00D47E?style=for-the-badge&logo=weaviate&logoColor=white)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6F61?style=for-the-badge&logo=databricks&logoColor=white)
+![pgvector](https://img.shields.io/badge/pgvector-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
-**AI & Machine Learning**
-
+### 🤖 LLMs, Generative AI & Agentic Systems
+![Google Cloud Vertex AI](https://img.shields.io/badge/Google_Cloud_Vertex_AI-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![LlamaIndex](https://img.shields.io/badge/LlamaIndex-4338CA?style=for-the-badge&logo=meta&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 
-**Frontend**
+### ☁️ Cloud, DevOps & Infrastructure as Code (IaC)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 
+### ⚡ Backend & Distributed Systems
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+
+### 💻 Frontend & Mobile
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-**Mobile & Desktop**
-
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
 
 ---
 
-## 📊 GitHub Stats
+## 📊 Live Automatically-Updated GitHub Stats
 
 <div align="center">
-  <img src="https://readme-stats-fork.vercel.app/api?username=Chief-Strategist-J&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="170" alt="stats"/>
-  <img src="https://readme-stats-fork.vercel.app/api/top-langs/?username=Chief-Strategist-J&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" alt="langs"/>
+  <img src="https://readme-stats-fork.vercel.app/api?username=Chief-Strategist-J&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="175" alt="stats"/>
+  <img src="https://readme-stats-fork.vercel.app/api/top-langs/?username=Chief-Strategist-J&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="175" alt="langs"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=Chief-Strategist-J&theme=tokyonight&hide_border=true" height="175" alt="GitHub Streak"/>
 </div>
 
 ---
 
-## ✍️ Featured Articles
+## ✍️ Featured Articles & Research
 
-> I write production-depth technical articles on distributed systems, backend architecture & AI — **300+ published on Medium.**
+> I write production-depth technical articles on distributed systems, backend architecture, RAG, & AI — **300+ published on Medium.**
 
 | | Article | Tag | Read |
 |---|---|---|---|
 | 🔥 | [Why Replication Is One of the Hardest Problems in Distributed Systems](https://medium.com/codetodeploy/why-replication-is-one-of-the-hardest-problems-in-distributed-systems-960de0117657) | `Distributed Systems` | 20 min |
 | 🔥 | [The Physics of Payment Systems: Why Exactly-Once Semantics Fail in Practice](https://medium.com/h7w/the-physics-of-payment-systems-why-exactly-once-semantics-fail-in-practice-895b5616baa0) | `Backend` | 15 min |
 | 🔥 | [From Minutes to Milliseconds: Docker Build Optimization](https://medium.com/h7w/from-minutes-to-milliseconds-docker-build-optimization-0bbc706ec692) | `DevOps` | 117 min |
-| 🔥 | [Hierarchical Semantic Chunking](https://medium.com/h7w/hierarchical-semantic-chunking-129bb46bba92) | `AI / RAG` | 15 min |
+| 🔥 | [Hierarchical Semantic Chunking](https://medium.com/h7w/hierarchical-semantic-chunking-129bb46bba92) | `AI / RAG / Vectors` | 15 min |
 | 📖 | [Retry, Error Handling & Idempotency: The Hidden Science Behind Reliable Distributed Systems](https://medium.com/@scaibu) | `Distributed Systems` | 48 min |
 | 📖 | [Stop Building Slow Systems: Master Advanced Queuing & Flow Control](https://medium.com/@scaibu) | `Backend` | 41 min |
 
@@ -96,10 +122,10 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 
 | Project | Description | Stack |
 |---|---|---|
-| 📊 [llm-observability-platform](https://github.com/Chief-Strategist-J/llm-observability-platform) | LLM monitoring & observability dashboard | `Python` `TypeScript` |
-| 🛒 [ProcureIQ](https://github.com/Chief-Strategist-J/ProcureIQ) | AI-powered enterprise procurement platform | `Next.js` `Python` |
-| 🔄 [kafka-messaging-pipeline](https://github.com/Chief-Strategist-J/kafka-messaging-pipeline) | High-throughput event-driven microservice pipeline | `Node.js` `Kafka` |
-| 🌐 [a2a-demo](https://github.com/Chief-Strategist-J/a2a-demo) | Google A2A Protocol demo with LangGraph & AI Agents | `Python` |
+| 📊 [llm-observability-platform](https://github.com/Chief-Strategist-J/llm-observability-platform) | LLM monitoring & observability dashboard | `Python` `TypeScript` `Vector DB` |
+| 🛒 [ProcureIQ](https://github.com/Chief-Strategist-J/ProcureIQ) | AI-powered enterprise procurement platform | `Next.js` `Python` `LangChain` |
+| 🔄 [kafka-messaging-pipeline](https://github.com/Chief-Strategist-J/kafka-messaging-pipeline) | High-throughput event-driven microservice pipeline | `Node.js` `Kafka` `Docker` |
+| 🌐 [a2a-demo](https://github.com/Chief-Strategist-J/a2a-demo) | Google A2A Protocol demo with LangGraph & AI Agents | `Python` `Google Cloud` `Gemini` |
 | 🔒 [scaibu_mutex_lock](https://github.com/Chief-Strategist-J/scaibu_mutex_lock) | High-performance async concurrency lock for Dart/Flutter | `Dart` `Flutter` |
 
 ---
@@ -112,13 +138,13 @@ I'm a **Full Stack Engineer & Founder** at [Scaibu](https://scaibu.co.in), based
 
 ---
 
-## 💼 Hire Me
+## 💼 Hire Me / Let's Connect
 
 <div align="center">
 
 **I'm available for the following opportunities:**
 
-✅ Full Stack Engineer &nbsp;|&nbsp; ✅ Freelance Projects &nbsp;|&nbsp; ✅ Remote Worldwide
+✅ Full Stack / AI Engineer &nbsp;|&nbsp; ✅ ML & Vector DB Consulting &nbsp;|&nbsp; ✅ Freelance & Contract &nbsp;|&nbsp; ✅ Remote Worldwide
 
 [![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-chief--strategist--j.github.io-6366F1?style=for-the-badge)](https://chief-strategist-j.github.io)
 [![LinkedIn](https://img.shields.io/badge/💼_Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jaydeep-wagh-257652255/)
