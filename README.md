@@ -43,12 +43,6 @@
 
 ## 🛠️ Tech Stack & Architecture Ecosystem
 
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=python,nodejs,fastapi,postgres,mongodb,redis,kafka,tensorflow,pytorch,gcp,aws,docker,kubernetes,terraform,githubactions,ts,react,nextjs,tailwind,flutter,dart&theme=dark" alt="Skill Icons" />
-</div>
-
-<br/>
-
 ### 🧠 Machine Learning & Deep Learning
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
