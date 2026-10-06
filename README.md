@@ -8,7 +8,7 @@
 
 <br/>
 
-[![Profile Views](https://komarev.com/ghpvc/?username=Chief-Strategist-J&label=Profile%20Views&color=6366f1&style=flat)](https://github.com/Chief-Strategist-J)
+[![Profile Views](https://hits.sh/github.com/Chief-Strategist-J.svg?label=Profile%20Views&color=6366f1&labelColor=0d1117)](https://github.com/Chief-Strategist-J)
 [![GitHub followers](https://img.shields.io/github/followers/Chief-Strategist-J?label=Followers&style=flat&color=6366f1)](https://github.com/Chief-Strategist-J)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/jaydeep-wagh-257652255/)
 [![Twitter](https://img.shields.io/badge/Twitter-%40ChiefErj-1DA1F2?style=flat&logo=twitter)](https://twitter.com/ChiefErj)
