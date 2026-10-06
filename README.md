@@ -193,76 +193,89 @@
 
 ---
 
-## 🏛️ Reference Progressive Delivery & Canary Architecture (ADR-0017)
-
-> *High-Level Design (HLD) showing external client ingress, Traefik traffic splitting, Argo Rollouts controller, dual-ReplicaSet topology, and automated Prometheus analysis.*
+## 🏛️ Reference System Architecture Topology (Kubernetes & SRE Plane)
 
 ```mermaid
 graph TD
     subgraph ExternalClients ["External Clients & Telemetry Sources"]
-        UserBrowser["User Browser / Developer"]
-        LLMWorker["LLM Worker Application (OTel Exporter)"]
+        ExtClient["Client Applications & SDKs"]
+        NodePortVIP["NodePort / Host Port Ingress VIP (31410 - 31427)"]
     end
 
-    subgraph IngressRoutingPlane ["Ingress & Traffic Routing Plane"]
-        TraefikRouter["Traefik Ingress Gateway (Port 80 / 443 / 31426)"]
-        TrafficSplit["Traefik TrafficSplit Engine (Weighted Ratio)"]
+    subgraph ControlPlane ["Kubernetes Control Plane (Master Node)"]
+        KubeAPI["kube-apiserver"]
+        DeployCtrl["Deployment Controller"]
+        EndpointCtrl["EndpointSlice Controller"]
+        CoreDNS["CoreDNS Cluster Resolver (10.96.0.10)"]
     end
 
-    subgraph KubernetesServicePlane ["Kubernetes Service Abstraction"]
-        StableService["llmobs-canary-rollout-stable (Service: ClusterIP)"]
-        CanaryService["llmobs-canary-rollout-canary (Service: ClusterIP)"]
+    subgraph DataPlaneStorage ["Persistent Storage Subsystem"]
+        CSI_Driver["local-path StorageClass Driver"]
+        PVC_Alloy["alloydb-data-pvc (20Gi)"]
+        PVC_CH["clickhouse-data-pvc (50Gi)"]
+        PVC_Kafka["kafka-data-pvc (30Gi)"]
+        PVC_Tempo["tempo-data-pvc (20Gi)"]
+        PVC_Grafana["grafana-data-pvc (5Gi)"]
     end
 
-    subgraph WorkloadPodPlane ["Pod Execution Layer (Namespace: llmobs)"]
-        subgraph StableReplicaSet ["Stable ReplicaSet (v1.2.0 - 95% Traffic)"]
-            PodStable1["Pod: stable-x8f72 (Running)"]
-            PodStable2["Pod: stable-m9k21 (Running)"]
+    subgraph NodeWorkers ["Kubernetes Worker Node (Namespace: llmobs)"]
+        subgraph StatefulCluster ["Stateful Cluster Services (Strategy: Recreate)"]
+            Pod_Alloy["AlloyDB Omni (Pod: 5432)"]
+            Pod_CH["ClickHouse Server (Pod: 8123/9000)"]
+            Pod_Kafka["Apache Kafka KRaft (Pod: 9092)"]
+            Pod_Tempo["Grafana Tempo (Pod: 3200)"]
         end
 
-        subgraph CanaryReplicaSet ["Canary ReplicaSet (v1.3.0 - 5% Traffic)"]
-            PodCanary1["Pod: canary-z4w19 (Running)"]
+        subgraph StatelessCluster ["Stateless Ingestion & UI (Strategy: RollingUpdate)"]
+            Pod_Redis["Redis Ledger Cache (Pod: 6379)"]
+            Pod_OTel["OTel Collector Contrib (Pod: 4318/13133)"]
+            Pod_Grafana["Grafana Portal UI (Pod: 3000)"]
+            Pod_Temporal["Temporal Workflow Engine (Pod: 7233)"]
+        end
+
+        subgraph CanaryRollout ["Progressive Delivery (Strategy: Canary)"]
+            Pod_CanaryStable["Service Registry Stable (95%)"]
+            Pod_CanaryCand["Service Registry Canary (5%)"]
         end
     end
 
-    subgraph ControlAndAnalysisPlane ["Control, GitOps & Automated Analysis Plane"]
-        ArgoController["Argo Rollouts Controller"]
-        Prometheus["Prometheus Metrics Server"]
-        GHActions["GitHub Actions CI/CD (.github/workflows/canary-traffic-rollout.yml)"]
-    end
+    ExtClient --> NodePortVIP
+    NodePortVIP --> Pod_OTel
+    NodePortVIP --> Pod_Grafana
+    NodePortVIP --> Pod_CanaryStable
 
-    UserBrowser -->|HTTP Requests| TraefikRouter
-    LLMWorker -->|OTLP Traces / Metrics| TraefikRouter
-    TraefikRouter --> TrafficSplit
+    KubeAPI --> DeployCtrl
+    KubeAPI --> EndpointCtrl
+    EndpointCtrl --> CoreDNS
 
-    TrafficSplit -->|95% Routed Requests| StableService
-    TrafficSplit -->|5% Routed Requests| CanaryService
+    CSI_Driver --> PVC_Alloy --> Pod_Alloy
+    CSI_Driver --> PVC_CH --> Pod_CH
+    CSI_Driver --> PVC_Kafka --> Pod_Kafka
+    CSI_Driver --> PVC_Tempo --> Pod_Tempo
+    CSI_Driver --> PVC_Grafana --> Pod_Grafana
 
-    StableService --> PodStable1
-    StableService --> PodStable2
-    CanaryService --> PodCanary1
+    Pod_OTel -->|OTLP gRPC/HTTP| Pod_Tempo
+    Pod_OTel -->|Batch Export| Pod_CH
+    Pod_OTel -->|Telemetry Stream| Pod_Kafka
+    Pod_Temporal -->|Workflow State| Pod_Alloy
+    Pod_Grafana -->|SQL Dashboards| Pod_CH
+    Pod_CanaryStable -->|Token Validation| Pod_Redis
 
-    GHActions -->|kubectl argo rollouts set image| ArgoController
-    ArgoController -->|Adjust Replicas & Labels| StableReplicaSet
-    ArgoController -->|Adjust Replicas & Labels| CanaryReplicaSet
-    ArgoController -->|Update Weight: 5% to 25% to 50%| TrafficSplit
-
-    Prometheus -->|Scrape /metrics| CanaryReplicaSet
-    Prometheus -->|Scrape /metrics| StableReplicaSet
-    ArgoController -->|Evaluate AnalysisTemplate| Prometheus
-
-    style UserBrowser fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
-    style LLMWorker fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
-    style TraefikRouter fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#f8fafc
-    style TrafficSplit fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#f8fafc
-    style StableService fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
-    style CanaryService fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
-    style PodStable1 fill:#1e293b,stroke:#94a3b8,stroke-width:2px,color:#f8fafc
-    style PodStable2 fill:#1e293b,stroke:#94a3b8,stroke-width:2px,color:#f8fafc
-    style PodCanary1 fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
-    style ArgoController fill:#701a75,stroke:#f472b6,stroke-width:2px,color:#f8fafc
-    style Prometheus fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#f8fafc
-    style GHActions fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    style ExtClient fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    style NodePortVIP fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    style KubeAPI fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    style CoreDNS fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    style CSI_Driver fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#f8fafc
+    style Pod_Alloy fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
+    style Pod_CH fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
+    style Pod_Kafka fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
+    style Pod_Tempo fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
+    style Pod_Redis fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    style Pod_OTel fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    style Pod_Grafana fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    style Pod_Temporal fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    style Pod_CanaryStable fill:#701a75,stroke:#f472b6,stroke-width:2px,color:#f8fafc
+    style Pod_CanaryCand fill:#701a75,stroke:#f472b6,stroke-width:2px,color:#f8fafc
 ```
 
 ---
