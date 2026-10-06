@@ -193,64 +193,76 @@
 
 ---
 
-## 🏛️ Reference System Architecture Topology (Progressive Canary & SRE Plane)
+## 🏛️ Reference Progressive Delivery & Canary Architecture (ADR-0017)
 
-> *Architectural reference blueprint showcasing high-concurrency ingestion, progressive traffic splitting, and automated SLO-based canary rollbacks.*
+> *High-Level Design (HLD) showing external client ingress, Traefik traffic splitting, Argo Rollouts controller, dual-ReplicaSet topology, and automated Prometheus analysis.*
 
 ```mermaid
-flowchart TD
-    subgraph ClientPlane ["1. High-Concurrency Client & Telemetry Plane"]
-        Clients["Web & Mobile Traffic<br/>1,000,000+ Req / 3 min"]
-        LLMSources["LLM Agents & Telemetry Sources<br/>Distributed Traces & Spans"]
+graph TD
+    subgraph ExternalClients ["External Clients & Telemetry Sources"]
+        UserBrowser["User Browser / Developer"]
+        LLMWorker["LLM Worker Application (OTel Exporter)"]
     end
 
-    subgraph EdgePlane ["2. Edge Ingress & Canary Traffic Split (Traefik / Argo)"]
-        Gateway["Edge Ingress Gateway<br/>TLS Termination & Rate Limiting"]
-        TrafficSplit{"Progressive Traffic Shift<br/>5% ➔ 25% ➔ 50% ➔ 100%"}
-        CanaryPod["Canary Deployment (vNext)<br/>Active Soak & Regression Probe"]
-        StablePod["Stable Deployment (vActive)<br/>99.99% SLO Baseline"]
+    subgraph IngressRoutingPlane ["Ingress & Traffic Routing Plane"]
+        TraefikRouter["Traefik Ingress Gateway (Port 80 / 443 / 31426)"]
+        TrafficSplit["Traefik TrafficSplit Engine (Weighted Ratio)"]
     end
 
-    subgraph StreamingPlane ["3. Resilient Event Streaming & Distributed Concurrency"]
-        KafkaMesh["Apache Kafka Event Mesh<br/>50,000+ msgs/sec | Idempotent Offsets"]
-        RedisLock["Redis Cache & Concurrency Lock<br/>scaibu_mutex_lock | sub-1ms Fast Path"]
+    subgraph KubernetesServicePlane ["Kubernetes Service Abstraction"]
+        StableService["llmobs-canary-rollout-stable (Service: ClusterIP)"]
+        CanaryService["llmobs-canary-rollout-canary (Service: ClusterIP)"]
     end
 
-    subgraph ComputePlane ["4. Composable Microservices & AI Engines"]
-        Workers["Distributed Compute Nodes<br/>FastAPI / Node.js / Go / Temporal"]
-        VectorEngine["Dense Vector Search & RAG<br/>Pinecone / Qdrant / pgvector | sub-20ms p95"]
+    subgraph WorkloadPodPlane ["Pod Execution Layer (Namespace: llmobs)"]
+        subgraph StableReplicaSet ["Stable ReplicaSet (v1.2.0 - 95% Traffic)"]
+            PodStable1["Pod: stable-x8f72 (Running)"]
+            PodStable2["Pod: stable-m9k21 (Running)"]
+        end
+
+        subgraph CanaryReplicaSet ["Canary ReplicaSet (v1.3.0 - 5% Traffic)"]
+            PodCanary1["Pod: canary-z4w19 (Running)"]
+        end
     end
 
-    subgraph SREPlane ["5. Real-Time SRE Observability & Auto-Rollback"]
-        OTel["OpenTelemetry Collector<br/>Distributed Telemetry Pipeline"]
-        TelemetryDB["ClickHouse & Grafana Tempo<br/>High-Cardinality Time-Series & Traces"]
-        Prometheus["Prometheus SLO Engine<br/>p99 sub-15ms | Error Ceiling sub-0.1%"]
-        Rollback{"Automated Health Gate<br/>Pass: Promote | Fail: Abort in sub-5s"}
+    subgraph ControlAndAnalysisPlane ["Control, GitOps & Automated Analysis Plane"]
+        ArgoController["Argo Rollouts Controller"]
+        Prometheus["Prometheus Metrics Server"]
+        GHActions["GitHub Actions CI/CD (.github/workflows/canary-traffic-rollout.yml)"]
     end
 
-    Clients --> Gateway
-    LLMSources --> Gateway
-    Gateway --> TrafficSplit
-    TrafficSplit -->|5% to 50% Weighted Shift| CanaryPod
-    TrafficSplit -->|Production Baseline| StablePod
+    UserBrowser -->|HTTP Requests| TraefikRouter
+    LLMWorker -->|OTLP Traces / Metrics| TraefikRouter
+    TraefikRouter --> TrafficSplit
 
-    CanaryPod --> KafkaMesh
-    StablePod --> KafkaMesh
-    CanaryPod --> RedisLock
-    StablePod --> RedisLock
+    TrafficSplit -->|95% Routed Requests| StableService
+    TrafficSplit -->|5% Routed Requests| CanaryService
 
-    KafkaMesh --> Workers
-    RedisLock --> Workers
-    Workers --> VectorEngine
+    StableService --> PodStable1
+    StableService --> PodStable2
+    CanaryService --> PodCanary1
 
-    CanaryPod -.->|Telemetry| OTel
-    StablePod -.->|Telemetry| OTel
-    Workers -.->|Traces| OTel
+    GHActions -->|kubectl argo rollouts set image| ArgoController
+    ArgoController -->|Adjust Replicas & Labels| StableReplicaSet
+    ArgoController -->|Adjust Replicas & Labels| CanaryReplicaSet
+    ArgoController -->|Update Weight: 5% to 25% to 50%| TrafficSplit
 
-    OTel --> TelemetryDB
-    OTel --> Prometheus
-    Prometheus --> Rollback
-    Rollback -.->|Auto Abort on Regression| TrafficSplit
+    Prometheus -->|Scrape /metrics| CanaryReplicaSet
+    Prometheus -->|Scrape /metrics| StableReplicaSet
+    ArgoController -->|Evaluate AnalysisTemplate| Prometheus
+
+    style UserBrowser fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    style LLMWorker fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    style TraefikRouter fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    style TrafficSplit fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#f8fafc
+    style StableService fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
+    style CanaryService fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
+    style PodStable1 fill:#1e293b,stroke:#94a3b8,stroke-width:2px,color:#f8fafc
+    style PodStable2 fill:#1e293b,stroke:#94a3b8,stroke-width:2px,color:#f8fafc
+    style PodCanary1 fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
+    style ArgoController fill:#701a75,stroke:#f472b6,stroke-width:2px,color:#f8fafc
+    style Prometheus fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#f8fafc
+    style GHActions fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
 ```
 
 ---
