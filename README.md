@@ -140,11 +140,11 @@
 
 | Project | Description | Stack |
 |---|---|---|
-| 📊 [llm-observability-platform](https://github.com/Chief-Strategist-J/llm-observability-platform) | LLM monitoring & observability dashboard | `Python` `TypeScript` `Vector DB` |
-| 🛒 [ProcureIQ](https://github.com/Chief-Strategist-J/ProcureIQ) | AI-powered enterprise procurement platform | `Next.js` `Python` `LangChain` |
-| 🔄 [kafka-messaging-pipeline](https://github.com/Chief-Strategist-J/kafka-messaging-pipeline) | High-throughput event-driven microservice pipeline | `Node.js` `Kafka` `Docker` |
-| 🌐 [a2a-demo](https://github.com/Chief-Strategist-J/a2a-demo) | Google A2A Protocol demo with LangGraph & AI Agents | `Python` `Google Cloud` `Gemini` |
-| 🔒 [scaibu_mutex_lock](https://github.com/Chief-Strategist-J/scaibu_mutex_lock) | High-performance async concurrency lock for Dart/Flutter | `Dart` `Flutter` |
+| 📊 [llm-observability-platform](https://github.com/Scaibu/llm-observability-platform) | LLM monitoring & observability dashboard | `Python` `TypeScript` `Vector DB` |
+| 🛒 [ProcureIQ](https://github.com/Scaibu/ProcureIQ) | AI-powered enterprise procurement platform | `Next.js` `Python` `LangChain` |
+| 🔄 [kafka-messaging-pipeline](https://github.com/Scaibu/kafka-messaging-pipeline) | High-throughput event-driven microservice pipeline | `Node.js` `Kafka` `Docker` |
+| 🌐 [a2a-demo](https://github.com/Scaibu/a2a-demo) | Google A2A Protocol demo with LangGraph & AI Agents | `Python` `Google Cloud` `Gemini` |
+| 🔒 [scaibu_mutex_lock](https://github.com/Scaibu/scaibu_mutex_lock) | High-performance async concurrency lock for Dart/Flutter | `Dart` `Flutter` |
 
 ---
 
