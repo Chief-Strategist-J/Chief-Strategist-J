@@ -26,11 +26,11 @@
     <td width="60%" valign="top">
       <h2>👋 Hey, I'm Jaydeep!</h2>
       <p>I'm a <strong>System Architect & Founder</strong> at <a href="https://scaibu.co.in"><strong>Scaibu</strong></a>, based in Bengaluru, India.</p>
-      <p>I design and build resilient <strong>distributed backends</strong>, <strong>high-throughput event streaming architectures</strong>, <strong>production AI/ML pipelines with Vector Databases</strong>, and <strong>cloud infrastructure</strong> across Google Cloud, TensorFlow, and Terraform.</p>
+      <p>I design and engineer mission-critical <strong>distributed backends</strong>, <strong>high-throughput streaming topologies</strong>, <strong>production AI/ML pipelines with Vector Databases</strong>, and <strong>self-healing cloud infrastructure</strong> across Google Cloud, TensorFlow, and Terraform.</p>
       <ul>
-        <li>⚡ Architecting systems capable of handling <strong>1M+ requests in 3 minutes</strong></li>
-        <li>🧠 Designing low-latency RAG architectures, Agentic AI, and Vector Search systems</li>
-        <li>☁️ Automating self-healing cloud infrastructure with Terraform & GCP/AWS</li>
+        <li>⚡ Architecting systems benchmarked at <strong>1M+ requests in 3 minutes</strong> with sub-15ms p99 latency</li>
+        <li>🛡️ Implementing progressive canary delivery, automated rollbacks, and 99.99% SLO governance</li>
+        <li>🧠 Designing dense semantic search engines & Agentic AI workflows</li>
         <li>✍️ Author of <strong>300+ technical deep dives</strong> on Medium</li>
       </ul>
       <p>🟢 <strong>Currently open for System Architect roles, Advisory & Consulting — Remote Worldwide!</strong></p>
@@ -43,42 +43,92 @@
 
 ---
 
-## ⚡ SRE Metrics & Architectural Scale Benchmarks
+## ⚡ High-Throughput & SRE Architecture Topology
 
+```mermaid
+flowchart TD
+    subgraph ClientPlane ["1. High-Concurrency Client & Telemetry Plane"]
+        Clients["🌐 Web & Mobile Clients<br/>🔥 1,000,000+ Req / 3 min"]
+        LLMSources["🤖 LLM Agents & Microservices<br/>⚡ OTel Traces & Event Streams"]
+    end
+
+    subgraph EdgePlane ["2. Edge Ingress & Canary Traffic Split (Traefik / Argo)"]
+        Gateway["🛡️ Edge Ingress Gateway<br/>TLS Termination & Rate Limiting"]
+        TrafficSplit{"⚖️ Progressive Traffic Shift<br/>5% ➔ 25% ➔ 50% ➔ 100%"}
+        CanaryPod["🧪 Canary Deployment (vNext)<br/>Active Soak & Anomaly Probe"]
+        StablePod["💎 Stable Deployment (vActive)<br/>99.99% SLO Baseline"]
+    end
+
+    subgraph StreamingPlane ["3. Resilient Event Streaming & Distributed Concurrency"]
+        KafkaMesh["🔄 Apache Kafka Event Mesh<br/>50,000+ msgs/sec | Idempotent Offsets"]
+        RedisLock["🔒 Redis Cache & Concurrency Lock<br/>scaibu_mutex_lock | < 1ms Fast Path"]
+    end
+
+    subgraph ComputePlane ["4. Composable Microservices & AI Engines"]
+        Workers["⚙️ Distributed Worker Nodes<br/>FastAPI / Node.js / Go / Temporal"]
+        VectorEngine["📐 Dense Vector Search & RAG<br/>Pinecone / Qdrant / pgvector | < 20ms p95"]
+    end
+
+    subgraph SREPlane ["5. Real-Time SRE Observability & Auto-Rollback"]
+        OTel["📡 OpenTelemetry Collector<br/>Distributed Traces & Spans"]
+        TelemetryDB["📊 ClickHouse & Grafana Tempo<br/>High-Cardinality Storage"]
+        Prometheus["🎯 Prometheus SRE Monitor<br/>p99 < 15ms | Error Rate < 0.1%"]
+        Rollback{"🚨 Automated Health Gate<br/>Pass ➔ Promote | Fail ➔ Rollback (< 5s)"}
+    end
+
+    Clients --> Gateway
+    LLMSources --> Gateway
+    Gateway --> TrafficSplit
+    TrafficSplit -->|5% - 50% Weighted Shift| CanaryPod
+    TrafficSplit -->|Production Baseline| StablePod
+
+    CanaryPod --> KafkaMesh
+    StablePod --> KafkaMesh
+    CanaryPod --> RedisLock
+    StablePod --> RedisLock
+
+    KafkaMesh --> Workers
+    RedisLock --> Workers
+    Workers --> VectorEngine
+
+    CanaryPod -.->|Telemetry| OTel
+    StablePod -.->|Telemetry| OTel
+    Workers -.->|Traces| OTel
+
+    OTel --> TelemetryDB
+    OTel --> Prometheus
+    Prometheus --> Rollback
+    Rollback -.->|Auto Abort on Regression| TrafficSplit
 ```
-┌───────────────────────────────┬───────────────────────────────┬───────────────────────────────┐
-│     PEAK THROUGHPUT           │       p99 LATENCY             │     SYSTEM AVAILABILITY       │
-│  🔥 1,000,000+ Req / 3 min    │   ⚡ < 15ms End-to-End         │   🎯 99.99% SLO Uptime        │
-├───────────────────────────────┼───────────────────────────────┼───────────────────────────────┤
-│     EVENT INGESTION           │     VECTOR RETRIEVAL          │     CLOUD EFFICIENCY          │
-│  🔄 50,000+ msgs / sec        │   🔍 < 20ms p95 Semantic      │   💰 40%+ Cost Reduction      │
-└───────────────────────────────┴───────────────────────────────┴───────────────────────────────┘
-```
+
+---
+
+## 📊 SRE Performance Benchmarks & SLO Matrix
 
 | Metric / Dimension | Target / Benchmark | Architectural Implementation |
 |---|---|---|
 | **🚀 Peak Ingestion & Scale** | **1,000,000+ Requests in 3 mins** | Asynchronous non-blocking I/O event loops, connection pooling, and multi-threaded stream workers. |
 | **⏱️ Latency Budget (p99)** | **< 15ms** | In-memory Redis caching layers, zero-copy serialization, and kernel-level socket optimizations. |
-| **🛡️ Reliability & SLO** | **99.99% High Availability** | Circuit breakers (`withCircuitBreaker`), exponential jittered retries, and automated Kubernetes failovers. |
+| **🛡️ Reliability & SLO** | **99.99% High Availability** | 4-stage progressive canary deployment (`5% → 25% → 50% → 100%`) with automatic sub-5s rollbacks. |
 | **🔄 Event Streaming Flow** | **50k+ msgs / sec** | Partition-aware Apache Kafka pipelines with idempotent consumer offsets and zero-data-loss guarantees. |
 | **📐 Vector Search Retrieval** | **< 20ms p95** | Hierarchical semantic chunking with HNSW indexed vector spaces across Pinecone, Qdrant & pgvector. |
 | **📦 Modular Reusability** | **90+ Composable Packages** | Schema-driven anti-corruption adapters and generic data engines for instant plug-and-play reuse. |
 
 ---
 
-## 🏗️ How I Architect for Extreme Scale & Reusability
+## 🏗️ How I Architect for Extreme Scale, Progressive Delivery & Reusability
 
-### 1. 🔄 Extreme Scale & Zero-Bottleneck Concurrency
+### 1. 🚦 Progressive Canary Delivery & Zero-Blast-Radius Deployments
+* **Weighted Traffic Shifting**: Integrated Argo Rollouts and Traefik TrafficSplit CRDs to gradually promote new binaries across 4 structured soak phases (`5% → 25% → 50% → 100%`).
+* **Automated Rollback Safeguards**: Prometheus metrics continuously evaluate p99 latency ceilings and HTTP 5xx error thresholds, automatically aborting unhealthy rollouts in **under 5 seconds**.
+
+### 2. 🔄 Extreme Scale & Zero-Bottleneck Concurrency
 * **High-Throughput Partitioning**: Designed streaming pipelines to absorb sudden traffic spikes (such as flash sales or real-time telemetry) by sharding workloads across dynamically-rebalanced Kafka partitions.
 * **Distributed Concurrency Primitives**: Engineered custom high-performance async mutex locking ([`scaibu_mutex_lock`](https://github.com/Scaibu/scaibu_mutex_lock)) to eliminate race conditions without sacrificing throughput.
 
-### 2. 🧩 Data-Driven Composable Foundations (Zero Boilerplate)
+### 3. 🧩 Data-Driven Composable Foundations (Zero Boilerplate)
 * **Contract-Driven Anti-Corruption Layer**: Universal `fromApi`/`toApi` transform pipelines that isolate backend contract changes from UI and business domains.
 * **Generic Adaptor & Saga Engines**: Reusable CRUD adapters, Redux-Saga workers, and rules engines that eliminate hand-rolled repetitive logic across 90+ microservices.
-
-### 3. 🛡️ SRE Fault-Tolerance & Self-Healing Cloud
-* **Autonomous Observability & Telemetry**: Integrated OpenTelemetry distributed tracing and custom burn-rate monitors ([`llm-observability-platform`](https://github.com/Scaibu/llm-observability-platform)) providing end-to-end trace waterfalls.
-* **Immutable Infrastructure**: 100% declarative Terraform configurations ensuring reproducible multi-region environments with automated rollback safety.
 
 ---
 
