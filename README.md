@@ -193,89 +193,68 @@
 
 ---
 
-## 🏛️ Reference System Architecture Topology (Kubernetes & SRE Plane)
+## 🏛️ State Machine: Canary Lifecycle & Phase Progression (ADR-0017)
+
+> *Deterministic Finite State Machine (FSM) governing progressive delivery phases, automated soak windows, Prometheus metric gates, and instant rollback paths.*
 
 ```mermaid
-graph TD
-    subgraph ExternalClients ["External Clients & Telemetry Sources"]
-        ExtClient["Client Applications & SDKs"]
-        NodePortVIP["NodePort / Host Port Ingress VIP (31410 - 31427)"]
-    end
+stateDiagram-v2
+    [*] --> HealthyStable : Normal Operations (100% Stable)
 
-    subgraph ControlPlane ["Kubernetes Control Plane (Master Node)"]
-        KubeAPI["kube-apiserver"]
-        DeployCtrl["Deployment Controller"]
-        EndpointCtrl["EndpointSlice Controller"]
-        CoreDNS["CoreDNS Cluster Resolver (10.96.0.10)"]
-    end
+    HealthyStable --> RolloutInitiated : New Pod Template (Image Tag Bump)
+    
+    state RolloutInitiated {
+        [*] --> CreatingCanaryRS
+        CreatingCanaryRS --> AwaitingProbes : Pods Scheduled & Started
+        AwaitingProbes --> CanaryReady : Readiness Probe Passed
+    }
 
-    subgraph DataPlaneStorage ["Persistent Storage Subsystem"]
-        CSI_Driver["local-path StorageClass Driver"]
-        PVC_Alloy["alloydb-data-pvc (20Gi)"]
-        PVC_CH["clickhouse-data-pvc (50Gi)"]
-        PVC_Kafka["kafka-data-pvc (30Gi)"]
-        PVC_Tempo["tempo-data-pvc (20Gi)"]
-        PVC_Grafana["grafana-data-pvc (5Gi)"]
-    end
+    RolloutInitiated --> Step1_Weight5 : Apply Step 1 (Weight = 5%)
+    
+    state Step1_Weight5 {
+        [*] --> Timer120s_1
+        Timer120s_1 --> Analyzing1 : Scrape Prometheus Every 30s
+        Analyzing1 --> Step1_Passed : Error Rate < 0.5% & P99 < 250ms
+    }
 
-    subgraph NodeWorkers ["Kubernetes Worker Node (Namespace: llmobs)"]
-        subgraph StatefulCluster ["Stateful Cluster Services (Strategy: Recreate)"]
-            Pod_Alloy["AlloyDB Omni (Pod: 5432)"]
-            Pod_CH["ClickHouse Server (Pod: 8123/9000)"]
-            Pod_Kafka["Apache Kafka KRaft (Pod: 9092)"]
-            Pod_Tempo["Grafana Tempo (Pod: 3200)"]
-        end
+    Step1_Weight5 --> Step2_Weight25 : Step 1 Complete (Promote to 25%)
+    
+    state Step2_Weight25 {
+        [*] --> Timer120s_2
+        Timer120s_2 --> Analyzing2 : Scrape Prometheus Every 30s
+        Analyzing2 --> Step2_Passed : Error Rate < 0.5% & P99 < 250ms
+    }
 
-        subgraph StatelessCluster ["Stateless Ingestion & UI (Strategy: RollingUpdate)"]
-            Pod_Redis["Redis Ledger Cache (Pod: 6379)"]
-            Pod_OTel["OTel Collector Contrib (Pod: 4318/13133)"]
-            Pod_Grafana["Grafana Portal UI (Pod: 3000)"]
-            Pod_Temporal["Temporal Workflow Engine (Pod: 7233)"]
-        end
+    Step2_Weight25 --> Step3_Weight50 : Step 2 Complete (Promote to 50%)
 
-        subgraph CanaryRollout ["Progressive Delivery (Strategy: Canary)"]
-            Pod_CanaryStable["Service Registry Stable (95%)"]
-            Pod_CanaryCand["Service Registry Canary (5%)"]
-        end
-    end
+    state Step3_Weight50 {
+        [*] --> Timer120s_3
+        Timer120s_3 --> Analyzing3 : Scrape Prometheus Every 30s
+        Analyzing3 --> Step3_Passed : Parity Validated
+    }
 
-    ExtClient --> NodePortVIP
-    NodePortVIP --> Pod_OTel
-    NodePortVIP --> Pod_Grafana
-    NodePortVIP --> Pod_CanaryStable
+    Step3_Weight50 --> FullPromotion_Weight100 : Final Step Complete
+    
+    state FullPromotion_Weight100 {
+        [*] --> CutoverTraffic : Set Weight = 100%
+        CutoverTraffic --> DrainOldStable : Wait terminationGracePeriod (30s)
+        DrainOldStable --> PromoteRS : Label Canary RS as New Stable
+    }
 
-    KubeAPI --> DeployCtrl
-    KubeAPI --> EndpointCtrl
-    EndpointCtrl --> CoreDNS
+    FullPromotion_Weight100 --> HealthyStable : Rollout Complete
 
-    CSI_Driver --> PVC_Alloy --> Pod_Alloy
-    CSI_Driver --> PVC_CH --> Pod_CH
-    CSI_Driver --> PVC_Kafka --> Pod_Kafka
-    CSI_Driver --> PVC_Tempo --> Pod_Tempo
-    CSI_Driver --> PVC_Grafana --> Pod_Grafana
+    %% Error & Abort Transitions
+    Step1_Weight5 --> Aborted : Analysis Failure OR Manual Abort
+    Step2_Weight25 --> Aborted : Analysis Failure OR Manual Abort
+    Step3_Weight50 --> Aborted : Analysis Failure OR Manual Abort
 
-    Pod_OTel -->|OTLP gRPC/HTTP| Pod_Tempo
-    Pod_OTel -->|Batch Export| Pod_CH
-    Pod_OTel -->|Telemetry Stream| Pod_Kafka
-    Pod_Temporal -->|Workflow State| Pod_Alloy
-    Pod_Grafana -->|SQL Dashboards| Pod_CH
-    Pod_CanaryStable -->|Token Validation| Pod_Redis
+    state Aborted {
+        [*] --> InstantTrafficZero : Reset TrafficSplit (Stable=100%, Canary=0%)
+        InstantTrafficZero --> TerminateCanary : Scale Canary RS to 0 Replicas
+        TerminateCanary --> PostIncidentAlert : Emit CloudEvent / Slack Alert
+    }
 
-    style ExtClient fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
-    style NodePortVIP fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
-    style KubeAPI fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#f8fafc
-    style CoreDNS fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#f8fafc
-    style CSI_Driver fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#f8fafc
-    style Pod_Alloy fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
-    style Pod_CH fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
-    style Pod_Kafka fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
-    style Pod_Tempo fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#f8fafc
-    style Pod_Redis fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
-    style Pod_OTel fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
-    style Pod_Grafana fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
-    style Pod_Temporal fill:#4c1d95,stroke:#c084fc,stroke-width:2px,color:#f8fafc
-    style Pod_CanaryStable fill:#701a75,stroke:#f472b6,stroke-width:2px,color:#f8fafc
-    style Pod_CanaryCand fill:#701a75,stroke:#f472b6,stroke-width:2px,color:#f8fafc
+    Aborted --> HealthyStable : Manual Retry or Rollback Spec
 ```
 
 ---
