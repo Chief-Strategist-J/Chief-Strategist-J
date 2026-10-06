@@ -1,12 +1,14 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=220&section=header&text=Jaydeep%20Vagh&fontSize=62&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=System%20Architect&descAlignY=62&descSize=20&descColor=A5B4FC" width="100%" alt="Jaydeep Vagh - System Architect"/>
+<img src="https://raw.githubusercontent.com/Chief-Strategist-J/Chief-Strategist-J/main/assets/header.svg" width="100%" alt="Jaydeep Vagh - System Architect"/>
+
+<br/><br/>
 
 <a href="https://chief-strategist-j.github.io">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=8B5CF6&center=true&vCenter=true&width=650&lines=System+Architect;Distributed+Systems+%26+Cloud+Infrastructure;Machine+Learning+%26+Vector+Databases;High-Throughput+Backend+Engineering" alt="Typing SVG" />
 </a>
 
-<br/>
+<br/><br/>
 
 [![Profile Views](https://hits.sh/github.com/Chief-Strategist-J.svg?label=Profile%20Views&color=6366f1&labelColor=0d1117)](https://github.com/Chief-Strategist-J)
 [![GitHub followers](https://img.shields.io/github/followers/Chief-Strategist-J?label=Followers&style=flat&color=6366f1)](https://github.com/Chief-Strategist-J)
@@ -34,7 +36,7 @@
       <p>🟢 <strong>Currently open for System Architect roles, Advisory & Consulting — Remote Worldwide!</strong></p>
     </td>
     <td width="40%" align="center" valign="middle">
-      <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" style="border-radius: 12px;" alt="Coding Animation"/>
+      <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" style="border-radius: 12px;" alt="Coding Animation"/>
     </td>
   </tr>
 </table>
@@ -158,11 +160,7 @@
 [![LinkedIn](https://img.shields.io/badge/💼_Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jaydeep-wagh-257652255/)
 [![Twitter](https://img.shields.io/badge/🐦_DM_on_Twitter-1DA1F2?style=for-the-badge&logo=twitter)](https://twitter.com/ChiefErj)
 
-</div>
+<br/><br/>
+<sub>⭐ If you find my work useful, please consider starring my repos — it helps a lot! 🙏</sub>
 
----
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,50:6366F1,100:0D1117&height=120&section=footer" width="100%" alt="footer"/>
-  <sub>⭐ If you find my work useful, please consider starring my repos — it helps a lot! 🙏</sub>
 </div>
