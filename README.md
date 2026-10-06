@@ -43,66 +43,6 @@
 
 ---
 
-## ⚡ High-Throughput & SRE Architecture Topology
-
-```mermaid
-flowchart TD
-    subgraph ClientPlane ["1. High-Concurrency Client & Telemetry Plane"]
-        Clients["🌐 Web & Mobile Clients<br/>🔥 1,000,000+ Req / 3 min"]
-        LLMSources["🤖 LLM Agents & Microservices<br/>⚡ OTel Traces & Event Streams"]
-    end
-
-    subgraph EdgePlane ["2. Edge Ingress & Canary Traffic Split (Traefik / Argo)"]
-        Gateway["🛡️ Edge Ingress Gateway<br/>TLS Termination & Rate Limiting"]
-        TrafficSplit{"⚖️ Progressive Traffic Shift<br/>5% ➔ 25% ➔ 50% ➔ 100%"}
-        CanaryPod["🧪 Canary Deployment (vNext)<br/>Active Soak & Anomaly Probe"]
-        StablePod["💎 Stable Deployment (vActive)<br/>99.99% SLO Baseline"]
-    end
-
-    subgraph StreamingPlane ["3. Resilient Event Streaming & Distributed Concurrency"]
-        KafkaMesh["🔄 Apache Kafka Event Mesh<br/>50,000+ msgs/sec | Idempotent Offsets"]
-        RedisLock["🔒 Redis Cache & Concurrency Lock<br/>scaibu_mutex_lock | < 1ms Fast Path"]
-    end
-
-    subgraph ComputePlane ["4. Composable Microservices & AI Engines"]
-        Workers["⚙️ Distributed Worker Nodes<br/>FastAPI / Node.js / Go / Temporal"]
-        VectorEngine["📐 Dense Vector Search & RAG<br/>Pinecone / Qdrant / pgvector | < 20ms p95"]
-    end
-
-    subgraph SREPlane ["5. Real-Time SRE Observability & Auto-Rollback"]
-        OTel["📡 OpenTelemetry Collector<br/>Distributed Traces & Spans"]
-        TelemetryDB["📊 ClickHouse & Grafana Tempo<br/>High-Cardinality Storage"]
-        Prometheus["🎯 Prometheus SRE Monitor<br/>p99 < 15ms | Error Rate < 0.1%"]
-        Rollback{"🚨 Automated Health Gate<br/>Pass ➔ Promote | Fail ➔ Rollback (< 5s)"}
-    end
-
-    Clients --> Gateway
-    LLMSources --> Gateway
-    Gateway --> TrafficSplit
-    TrafficSplit -->|5% - 50% Weighted Shift| CanaryPod
-    TrafficSplit -->|Production Baseline| StablePod
-
-    CanaryPod --> KafkaMesh
-    StablePod --> KafkaMesh
-    CanaryPod --> RedisLock
-    StablePod --> RedisLock
-
-    KafkaMesh --> Workers
-    RedisLock --> Workers
-    Workers --> VectorEngine
-
-    CanaryPod -.->|Telemetry| OTel
-    StablePod -.->|Telemetry| OTel
-    Workers -.->|Traces| OTel
-
-    OTel --> TelemetryDB
-    OTel --> Prometheus
-    Prometheus --> Rollback
-    Rollback -.->|Auto Abort on Regression| TrafficSplit
-```
-
----
-
 ## 📊 SRE Performance Benchmarks & SLO Matrix
 
 | Metric / Dimension | Target / Benchmark | Architectural Implementation |
@@ -249,7 +189,72 @@ flowchart TD
 [![LinkedIn](https://img.shields.io/badge/💼_Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jaydeep-wagh-257652255/)
 [![Twitter](https://img.shields.io/badge/🐦_DM_on_Twitter-1DA1F2?style=for-the-badge&logo=twitter)](https://twitter.com/ChiefErj)
 
-<br/><br/>
-<sub>⭐ If you find my work useful, please consider starring my repos — it helps a lot! 🙏</sub>
+</div>
 
+---
+
+## 🏛️ Reference System Architecture Topology (Progressive Canary & SRE Plane)
+
+> *Architectural reference blueprint showcasing high-concurrency ingestion, progressive traffic splitting, and automated SLO-based canary rollbacks.*
+
+```mermaid
+flowchart TD
+    subgraph ClientPlane ["1. High-Concurrency Client & Telemetry Plane"]
+        Clients["Web & Mobile Traffic<br/>1,000,000+ Req / 3 min"]
+        LLMSources["LLM Agents & Telemetry Sources<br/>Distributed Traces & Spans"]
+    end
+
+    subgraph EdgePlane ["2. Edge Ingress & Canary Traffic Split (Traefik / Argo)"]
+        Gateway["Edge Ingress Gateway<br/>TLS Termination & Rate Limiting"]
+        TrafficSplit{"Progressive Traffic Shift<br/>5% ➔ 25% ➔ 50% ➔ 100%"}
+        CanaryPod["Canary Deployment (vNext)<br/>Active Soak & Regression Probe"]
+        StablePod["Stable Deployment (vActive)<br/>99.99% SLO Baseline"]
+    end
+
+    subgraph StreamingPlane ["3. Resilient Event Streaming & Distributed Concurrency"]
+        KafkaMesh["Apache Kafka Event Mesh<br/>50,000+ msgs/sec | Idempotent Offsets"]
+        RedisLock["Redis Cache & Concurrency Lock<br/>scaibu_mutex_lock | sub-1ms Fast Path"]
+    end
+
+    subgraph ComputePlane ["4. Composable Microservices & AI Engines"]
+        Workers["Distributed Compute Nodes<br/>FastAPI / Node.js / Go / Temporal"]
+        VectorEngine["Dense Vector Search & RAG<br/>Pinecone / Qdrant / pgvector | sub-20ms p95"]
+    end
+
+    subgraph SREPlane ["5. Real-Time SRE Observability & Auto-Rollback"]
+        OTel["OpenTelemetry Collector<br/>Distributed Telemetry Pipeline"]
+        TelemetryDB["ClickHouse & Grafana Tempo<br/>High-Cardinality Time-Series & Traces"]
+        Prometheus["Prometheus SLO Engine<br/>p99 sub-15ms | Error Ceiling sub-0.1%"]
+        Rollback{"Automated Health Gate<br/>Pass: Promote | Fail: Abort in sub-5s"}
+    end
+
+    Clients --> Gateway
+    LLMSources --> Gateway
+    Gateway --> TrafficSplit
+    TrafficSplit -->|5% to 50% Weighted Shift| CanaryPod
+    TrafficSplit -->|Production Baseline| StablePod
+
+    CanaryPod --> KafkaMesh
+    StablePod --> KafkaMesh
+    CanaryPod --> RedisLock
+    StablePod --> RedisLock
+
+    KafkaMesh --> Workers
+    RedisLock --> Workers
+    Workers --> VectorEngine
+
+    CanaryPod -.->|Telemetry| OTel
+    StablePod -.->|Telemetry| OTel
+    Workers -.->|Traces| OTel
+
+    OTel --> TelemetryDB
+    OTel --> Prometheus
+    Prometheus --> Rollback
+    Rollback -.->|Auto Abort on Regression| TrafficSplit
+```
+
+---
+
+<div align="center">
+  <sub>⭐ If you find my work useful, please consider starring my repos — it helps a lot! 🙏</sub>
 </div>
