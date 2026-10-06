@@ -19,17 +19,35 @@
 
 ---
 
-## 👋 Hey, I'm Jaydeep!
-
-I'm a **System Architect & Founder** at [Scaibu](https://scaibu.co.in), based in Bengaluru, India. I design and build resilient **distributed systems**, **production AI/ML pipelines with Vector Databases**, and **high-scale cloud infrastructure** with Google Cloud, TensorFlow, and Terraform.
-
-> 🟢 **Currently open for System Architect roles, High-Scale Consulting & Advisory — Remote Worldwide!**
->
-> 📬 Reach me: [Portfolio](https://chief-strategist-j.github.io) • [LinkedIn](https://www.linkedin.com/in/jaydeep-wagh-257652255/) • [Twitter](https://twitter.com/ChiefErj)
+<table>
+  <tr>
+    <td width="60%" valign="top">
+      <h2>👋 Hey, I'm Jaydeep!</h2>
+      <p>I'm a <strong>System Architect & Founder</strong> at <a href="https://scaibu.co.in"><strong>Scaibu</strong></a>, based in Bengaluru, India.</p>
+      <p>I architect and scale resilient <strong>distributed systems</strong>, <strong>production AI/ML & Vector Database pipelines</strong>, and <strong>cloud infrastructure</strong> across Google Cloud, TensorFlow, and Terraform.</p>
+      <ul>
+        <li>🚀 Architecting high-throughput event pipelines & microservices</li>
+        <li>🧠 Designing RAG architectures, Agentic AI, and Vector Search systems</li>
+        <li>☁️ Automating cloud infrastructure with Terraform & GCP/AWS</li>
+        <li>✍️ Author of <strong>300+ technical deep dives</strong> on Medium</li>
+      </ul>
+      <p>🟢 <strong>Currently open for System Architect roles, Advisory & Consulting — Remote Worldwide!</strong></p>
+    </td>
+    <td width="40%" align="center" valign="middle">
+      <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" style="border-radius: 12px;" alt="Coding Animation"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## 🛠️ Tech Stack & Architecture Ecosystem
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=python,nodejs,fastapi,postgres,mongodb,redis,kafka,tensorflow,pytorch,gcp,aws,docker,kubernetes,terraform,githubactions,ts,react,nextjs,tailwind,flutter,dart&theme=dark" alt="Skill Icons" />
+</div>
+
+<br/>
 
 ### 🧠 Machine Learning & Deep Learning
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
