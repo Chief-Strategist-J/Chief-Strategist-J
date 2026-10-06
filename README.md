@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=260&section=header&text=Jaydeep%20Vagh&fontSize=70&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20%26%20AI%2FML%20Systems%20Engineer%20%40Scaibu&descAlignY=60&descSize=18&descColor=A5B4FC" width="100%" alt="header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:6366F1,100:8B5CF6&height=220&section=header&text=Jaydeep%20Vagh&fontSize=62&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=System%20Architect&descAlignY=62&descSize=20&descColor=A5B4FC" width="100%" alt="Jaydeep Vagh - System Architect"/>
+
+<a href="https://chief-strategist-j.github.io">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=8B5CF6&center=true&vCenter=true&width=650&lines=System+Architect;Distributed+Systems+%26+Cloud+Infrastructure;Machine+Learning+%26+Vector+Databases;High-Throughput+Backend+Engineering" alt="Typing SVG" />
+</a>
 
 <br/>
 
@@ -17,15 +21,15 @@
 
 ## 👋 Hey, I'm Jaydeep!
 
-I'm a **Full Stack & AI/ML Systems Engineer & Founder** at [Scaibu](https://scaibu.co.in), based in Bengaluru, India. I specialize in building high-throughput **distributed backends**, **agentic AI architectures**, **RAG pipelines with Vector Databases**, and **Machine Learning infrastructure** using Google Cloud, TensorFlow, and Terraform.
+I'm a **System Architect & Founder** at [Scaibu](https://scaibu.co.in), based in Bengaluru, India. I design and build resilient **distributed systems**, **production AI/ML pipelines with Vector Databases**, and **high-scale cloud infrastructure** with Google Cloud, TensorFlow, and Terraform.
 
-> 🟢 **Currently open for Full-Time roles, AI/ML Consulting & Freelance projects — Remote Worldwide!**
+> 🟢 **Currently open for System Architect roles, High-Scale Consulting & Advisory — Remote Worldwide!**
 >
 > 📬 Reach me: [Portfolio](https://chief-strategist-j.github.io) • [LinkedIn](https://www.linkedin.com/in/jaydeep-wagh-257652255/) • [Twitter](https://twitter.com/ChiefErj)
 
 ---
 
-## 🛠️ Tech Stack & Ecosystem
+## 🛠️ Tech Stack & Architecture Ecosystem
 
 ### 🧠 Machine Learning & Deep Learning
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
@@ -44,7 +48,7 @@ I'm a **Full Stack & AI/ML Systems Engineer & Founder** at [Scaibu](https://scai
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6F61?style=for-the-badge&logo=databricks&logoColor=white)
 ![pgvector](https://img.shields.io/badge/pgvector-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
-### 🤖 LLMs, Generative AI & Agentic Systems
+### 🤖 LLMs, Generative AI & Agentic Architectures
 ![Google Cloud Vertex AI](https://img.shields.io/badge/Google_Cloud_Vertex_AI-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 ![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
@@ -82,11 +86,11 @@ I'm a **Full Stack & AI/ML Systems Engineer & Founder** at [Scaibu](https://scai
 
 ---
 
-## 📊 Live Automatically-Updated GitHub Stats
+## 📊 Live Automatically-Updated GitHub Activity & Stats
 
 <div align="center">
-  <img src="https://readme-stats-fork.vercel.app/api?username=Chief-Strategist-J&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="175" alt="stats"/>
-  <img src="https://readme-stats-fork.vercel.app/api/top-langs/?username=Chief-Strategist-J&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="175" alt="langs"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Chief-Strategist-J&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="175" alt="stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chief-Strategist-J&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="175" alt="langs"/>
 </div>
 
 <br/>
@@ -97,7 +101,7 @@ I'm a **Full Stack & AI/ML Systems Engineer & Founder** at [Scaibu](https://scai
 
 ---
 
-## ✍️ Featured Articles & Research
+## ✍️ Featured Articles & System Design Research
 
 > I write production-depth technical articles on distributed systems, backend architecture, RAG, & AI — **300+ published on Medium.**
 
@@ -118,7 +122,7 @@ I'm a **Full Stack & AI/ML Systems Engineer & Founder** at [Scaibu](https://scai
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 Featured Architecture Projects
 
 | Project | Description | Stack |
 |---|---|---|
@@ -130,21 +134,13 @@ I'm a **Full Stack & AI/ML Systems Engineer & Founder** at [Scaibu](https://scai
 
 ---
 
-## 📈 Contribution Activity
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Chief-Strategist-J&bg_color=1a1b27&color=6366F1&line=8B5CF6&point=FFFFFF&area=true&hide_border=true" width="100%" alt="activity graph"/>
-</div>
-
----
-
 ## 💼 Hire Me / Let's Connect
 
 <div align="center">
 
 **I'm available for the following opportunities:**
 
-✅ Full Stack / AI Engineer &nbsp;|&nbsp; ✅ ML & Vector DB Consulting &nbsp;|&nbsp; ✅ Freelance & Contract &nbsp;|&nbsp; ✅ Remote Worldwide
+✅ System Architect &nbsp;|&nbsp; ✅ Distributed Systems & AI Consulting &nbsp;|&nbsp; ✅ High-Scale Engineering Advisory &nbsp;|&nbsp; ✅ Remote Worldwide
 
 [![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-chief--strategist--j.github.io-6366F1?style=for-the-badge)](https://chief-strategist-j.github.io)
 [![LinkedIn](https://img.shields.io/badge/💼_Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jaydeep-wagh-257652255/)
