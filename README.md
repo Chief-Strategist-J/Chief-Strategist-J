@@ -26,11 +26,11 @@
     <td width="60%" valign="top">
       <h2>👋 Hey, I'm Jaydeep!</h2>
       <p>I'm a <strong>System Architect & Founder</strong> at <a href="https://scaibu.co.in"><strong>Scaibu</strong></a>, based in Bengaluru, India.</p>
-      <p>I architect and scale resilient <strong>distributed systems</strong>, <strong>production AI/ML & Vector Database pipelines</strong>, and <strong>cloud infrastructure</strong> across Google Cloud, TensorFlow, and Terraform.</p>
+      <p>I design and build resilient <strong>distributed backends</strong>, <strong>high-throughput event streaming architectures</strong>, <strong>production AI/ML pipelines with Vector Databases</strong>, and <strong>cloud infrastructure</strong> across Google Cloud, TensorFlow, and Terraform.</p>
       <ul>
-        <li>🚀 Architecting high-throughput event pipelines & microservices</li>
-        <li>🧠 Designing RAG architectures, Agentic AI, and Vector Search systems</li>
-        <li>☁️ Automating cloud infrastructure with Terraform & GCP/AWS</li>
+        <li>⚡ Architecting systems capable of handling <strong>1M+ requests in 3 minutes</strong></li>
+        <li>🧠 Designing low-latency RAG architectures, Agentic AI, and Vector Search systems</li>
+        <li>☁️ Automating self-healing cloud infrastructure with Terraform & GCP/AWS</li>
         <li>✍️ Author of <strong>300+ technical deep dives</strong> on Medium</li>
       </ul>
       <p>🟢 <strong>Currently open for System Architect roles, Advisory & Consulting — Remote Worldwide!</strong></p>
@@ -40,6 +40,45 @@
     </td>
   </tr>
 </table>
+
+---
+
+## ⚡ SRE Metrics & Architectural Scale Benchmarks
+
+```
+┌───────────────────────────────┬───────────────────────────────┬───────────────────────────────┐
+│     PEAK THROUGHPUT           │       p99 LATENCY             │     SYSTEM AVAILABILITY       │
+│  🔥 1,000,000+ Req / 3 min    │   ⚡ < 15ms End-to-End         │   🎯 99.99% SLO Uptime        │
+├───────────────────────────────┼───────────────────────────────┼───────────────────────────────┤
+│     EVENT INGESTION           │     VECTOR RETRIEVAL          │     CLOUD EFFICIENCY          │
+│  🔄 50,000+ msgs / sec        │   🔍 < 20ms p95 Semantic      │   💰 40%+ Cost Reduction      │
+└───────────────────────────────┴───────────────────────────────┴───────────────────────────────┘
+```
+
+| Metric / Dimension | Target / Benchmark | Architectural Implementation |
+|---|---|---|
+| **🚀 Peak Ingestion & Scale** | **1,000,000+ Requests in 3 mins** | Asynchronous non-blocking I/O event loops, connection pooling, and multi-threaded stream workers. |
+| **⏱️ Latency Budget (p99)** | **< 15ms** | In-memory Redis caching layers, zero-copy serialization, and kernel-level socket optimizations. |
+| **🛡️ Reliability & SLO** | **99.99% High Availability** | Circuit breakers (`withCircuitBreaker`), exponential jittered retries, and automated Kubernetes failovers. |
+| **🔄 Event Streaming Flow** | **50k+ msgs / sec** | Partition-aware Apache Kafka pipelines with idempotent consumer offsets and zero-data-loss guarantees. |
+| **📐 Vector Search Retrieval** | **< 20ms p95** | Hierarchical semantic chunking with HNSW indexed vector spaces across Pinecone, Qdrant & pgvector. |
+| **📦 Modular Reusability** | **90+ Composable Packages** | Schema-driven anti-corruption adapters and generic data engines for instant plug-and-play reuse. |
+
+---
+
+## 🏗️ How I Architect for Extreme Scale & Reusability
+
+### 1. 🔄 Extreme Scale & Zero-Bottleneck Concurrency
+* **High-Throughput Partitioning**: Designed streaming pipelines to absorb sudden traffic spikes (such as flash sales or real-time telemetry) by sharding workloads across dynamically-rebalanced Kafka partitions.
+* **Distributed Concurrency Primitives**: Engineered custom high-performance async mutex locking ([`scaibu_mutex_lock`](https://github.com/Scaibu/scaibu_mutex_lock)) to eliminate race conditions without sacrificing throughput.
+
+### 2. 🧩 Data-Driven Composable Foundations (Zero Boilerplate)
+* **Contract-Driven Anti-Corruption Layer**: Universal `fromApi`/`toApi` transform pipelines that isolate backend contract changes from UI and business domains.
+* **Generic Adaptor & Saga Engines**: Reusable CRUD adapters, Redux-Saga workers, and rules engines that eliminate hand-rolled repetitive logic across 90+ microservices.
+
+### 3. 🛡️ SRE Fault-Tolerance & Self-Healing Cloud
+* **Autonomous Observability & Telemetry**: Integrated OpenTelemetry distributed tracing and custom burn-rate monitors ([`llm-observability-platform`](https://github.com/Scaibu/llm-observability-platform)) providing end-to-end trace waterfalls.
+* **Immutable Infrastructure**: 100% declarative Terraform configurations ensuring reproducible multi-region environments with automated rollback safety.
 
 ---
 
@@ -87,7 +126,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
 ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 
 ### 💻 Frontend & Mobile
